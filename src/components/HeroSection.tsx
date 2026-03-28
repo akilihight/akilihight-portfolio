@@ -6,10 +6,10 @@ const HeroSection = () => (
       <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         <div className="space-y-10">
           <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-semibold leading-[1.15] text-foreground">
-            I help you make sense of what you're dealing with and figure out what to do next.
+            I help you make sense of what you're dealing with and actually move forward.
           </h1>
           <p className="text-lg text-muted-foreground/80 leading-relaxed max-w-lg">
-            For people, founders, and teams who feel stuck, unclear, or pulled in too many directions.
+            For people, founders, and teams who are stuck, unclear, or trying to figure out what to do next — and need something practical, not theoretical.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a

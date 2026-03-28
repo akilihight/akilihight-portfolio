@@ -14,7 +14,7 @@ const offers = [
 ];
 
 const OffersSection = () => (
-  <section id="offers" className="py-32 bg-secondary/40">
+  <section id="offers" className="py-32">
     <div className="container mx-auto px-6 lg:px-16">
       <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-14">Offers</h2>
       <div className="grid md:grid-cols-3 gap-8">

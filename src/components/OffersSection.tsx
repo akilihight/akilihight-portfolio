@@ -1,15 +1,15 @@
 const offers = [
   {
     title: "Clarity Session",
-    description: "Bring whatever you're trying to figure out. We'll make it clear and define your next move.",
+    description: "Walk away with a clear plan and next steps you can actually act on.",
   },
   {
     title: "AI Readiness Snapshot",
-    description: "For organizations exploring AI or modernization but not sure if they're actually ready.",
+    description: "Understand where AI actually fits in your business and what to do about it.",
   },
   {
     title: "Execution Reset",
-    description: "If something you're working on feels stuck, unclear, or drifting, I'll help you reset it and move forward.",
+    description: "Fix what's stuck, remove confusion, and get things moving again.",
   },
 ];
 

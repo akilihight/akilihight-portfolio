@@ -6,14 +6,16 @@ const HeroSection = () => (
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div className="space-y-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] text-foreground">
-            I help you make sense of what you're dealing with and actually move forward.
+            I help you get clear, get aligned, and move forward.
           </h1>
           <p className="text-lg text-muted-foreground/70 leading-relaxed max-w-lg">
-            For people, founders, and teams who are stuck, unclear, or trying to figure out what to do next — and need something practical, not theoretical.
+            For people, founders, and teams who feel stuck, pulled in too many directions, or unsure what the next move should be.
           </p>
           <div className="flex flex-col sm:flex-row gap-5">
             <a
-              href="#cta"
+              href="https://calendly.com/hightnetworksconsulting/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-lg bg-primary px-10 py-4 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Book a Clarity Session

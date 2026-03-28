@@ -22,9 +22,9 @@ const offers = [
     detail: "A focused review for organizations exploring AI but unsure where to begin, what is missing, or what needs to be true before moving forward.",
     bestFor: "Teams, leaders, and organizations navigating AI, data, and operational readiness.",
     outcome: "A clearer view of risks, gaps, and next steps.",
-    cta: "Learn More",
-    href: "mailto:info@hightnetworks.com",
-    external: false,
+    cta: "Visit CloudBait Navigator",
+    href: "https://cloudbait.io/",
+    external: true,
   },
   {
     title: "Execution Reset",
@@ -32,9 +32,9 @@ const offers = [
     detail: "A practical reset for projects, priorities, or initiatives that feel unclear, stalled, or out of sync.",
     bestFor: "Teams and leaders dealing with drift, confusion, or too many moving parts.",
     outcome: "A clearer path, sharper priorities, and a more workable next step.",
-    cta: "Learn More",
-    href: "mailto:info@hightnetworks.com",
-    external: false,
+    cta: "Visit Project Navigator",
+    href: "https://projectnavigator.ai/",
+    external: true,
   },
 ];
 

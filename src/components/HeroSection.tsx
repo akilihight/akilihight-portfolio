@@ -11,15 +11,18 @@ const HeroSection = () => (
           <p className="text-lg md:text-xl text-muted-foreground/70 leading-relaxed max-w-lg">
             For people, founders, and teams who feel stuck, pulled in too many directions, or unsure what the next move should be.
           </p>
-          <div className="flex flex-col sm:flex-row gap-5">
-            <a
-              href="https://calendly.com/hightnetworksconsulting/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg bg-primary px-10 py-4 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-            >
-              Book a Clarity Session
-            </a>
+          <div className="flex flex-col sm:flex-row gap-5 items-start">
+            <div className="flex flex-col gap-2">
+              <a
+                href="https://calendly.com/hightnetworksconsulting/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-primary px-10 py-4 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                Book a Free Intro Call
+              </a>
+              <span className="text-sm text-muted-foreground/60 pl-1">Free 30-minute introductory call</span>
+            </div>
             <a
               href="#offers"
               className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-4 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"

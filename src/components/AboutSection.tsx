@@ -9,7 +9,7 @@ const AboutSection = () => (
             <img
               src={akiliAbout}
               alt="Akili Hight"
-              className="rounded-xl w-full max-w-sm object-cover"
+              className="rounded-xl w-full max-w-md object-cover"
               loading="lazy"
               width={800}
               height={1024}
@@ -20,26 +20,24 @@ const AboutSection = () => (
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground">About</h2>
           <div className="space-y-5 text-lg md:text-xl text-muted-foreground leading-relaxed">
             <p>
-              I've spent over 20 years leading enterprise technology and transformation work across healthcare and regulated environments.
+              I've spent over 20 years leading technology and transformation work across healthcare and other regulated environments.
             </p>
             <p>
-              That includes cloud modernization, data platforms, infrastructure, and large-scale digital initiatives supporting mission-critical systems.
+              That includes cloud modernization, data platforms, infrastructure, and large-scale digital initiatives tied to mission-critical systems.
             </p>
-            <p>Across that experience, one pattern shows up consistently.</p>
-            <p>Most problems are not caused by a lack of effort.</p>
+            <p>Over time, one pattern has shown up again and again.</p>
             <p>
-              They come from lack of clarity, misalignment, or too many moving parts.
+              Most problems are not caused by lack of effort. They come from lack of clarity, misalignment, or too many moving parts.
             </p>
-            <p>That's the work I focus on now.</p>
+            <p>That is the work I focus on now.</p>
             <p>
-              Helping people, founders, and teams make sense of complex situations, get aligned on what matters, and move forward with clear, practical next steps.
+              I help people, founders, and teams get clear on what matters, cut through the noise, and move forward with practical next steps.
             </p>
             <p>
-              Sometimes that work connects to enterprise systems, AI readiness, or structured transformation.
+              Sometimes that connects to enterprise systems, AI readiness, or structured transformation. Sometimes it is much simpler.
             </p>
-            <p>Sometimes it's much simpler.</p>
             <p className="text-foreground font-medium">
-              But the goal is always the same. Clarity that leads to movement.
+              The goal is the same either way: clarity you can act on.
             </p>
           </div>
         </div>

@@ -1,19 +1,18 @@
 const ventures = [
-  { name: "Hight Networks", desc: "enterprise advisory", url: "https://www.hightnetworks.com/" },
-  { name: "CloudBait Navigator", desc: "readiness", url: "https://cloudbait.io/" },
-  { name: "ProjectNavigator.ai", desc: "execution", url: "https://projectnavigator.ai/" },
-  { name: "Gritletter", desc: "insights", url: "https://gritletter.co/" },
-  { name: "Lucid Futurism", desc: "creative work", url: "https://www.lucidfuturism.com/" },
-  { name: "Lucid Lounge", desc: "future physical space", url: "https://lucidlounge.lovable.app/" },
+  { name: "Hight Networks", desc: "Advisory", url: "https://www.hightnetworks.com/" },
+  { name: "CloudBait Navigator", desc: "Readiness", url: "https://cloudbait.io/" },
+  { name: "Project Navigator", desc: "Execution", url: "https://projectnavigator.ai/" },
+  { name: "Gritletter", desc: "Insights", url: "https://gritletter.co/" },
+  { name: "Lucid Futurism", desc: "Creative", url: "https://www.lucidfuturism.com/" },
+  { name: "Lucid Lounge", desc: "Physical space", url: "https://lucidlounge.lovable.app/" },
 ];
 
 const EcosystemSection = () => (
-  <section id="ecosystem" className="py-32 bg-secondary/40">
+  <section id="ecosystem" className="py-36 bg-secondary/40">
     <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
-      <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-5">Ecosystem</h2>
-      <p className="text-muted-foreground leading-relaxed mb-12">
-        Different parts of my work live in different places, but they all serve the same goal:
-        helping people move forward with clarity.
+      <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-5">Ecosystem</h2>
+      <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12">
+        Different parts of my work live in different places, but they all serve the same goal: helping people move forward with clarity.
       </p>
       <ul className="space-y-5">
         {ventures.map((v) => (

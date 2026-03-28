@@ -1,7 +1,7 @@
 const CtaSection = () => (
-  <section id="cta" className="py-32 bg-secondary/40">
+  <section id="cta" className="py-36 bg-secondary/40">
     <div className="container mx-auto px-6 lg:px-16 text-center max-w-2xl">
-      <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-10">
+      <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-10">
         Start with a conversation.
       </h2>
       <div className="flex flex-col sm:flex-row gap-5 justify-center">

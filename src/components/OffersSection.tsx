@@ -22,9 +22,9 @@ const offers = [
     detail: "A focused review for organizations exploring AI but unsure where to begin, what is missing, or what needs to be true before moving forward.",
     bestFor: "Teams, leaders, and organizations navigating AI, data, and operational readiness.",
     outcome: "A clearer view of risks, gaps, and next steps.",
-    cta: "Learn More",
-    href: "mailto:info@hightnetworks.com",
-    external: false,
+    cta: "Visit CloudBait Navigator",
+    href: "https://cloudbait.io/",
+    external: true,
   },
   {
     title: "Execution Reset",
@@ -32,9 +32,9 @@ const offers = [
     detail: "A practical reset for projects, priorities, or initiatives that feel unclear, stalled, or out of sync.",
     bestFor: "Teams and leaders dealing with drift, confusion, or too many moving parts.",
     outcome: "A clearer path, sharper priorities, and a more workable next step.",
-    cta: "Learn More",
-    href: "mailto:info@hightnetworks.com",
-    external: false,
+    cta: "Visit Project Navigator",
+    href: "https://projectnavigator.ai/",
+    external: true,
   },
 ];
 
@@ -49,12 +49,12 @@ const OffersSection = () => (
         {offers.map((offer) => (
           <div
             key={offer.title}
-            className="bg-card rounded-xl p-9 border border-border/70 space-y-4 transition-shadow hover:shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] flex flex-col"
+            className="bg-card rounded-xl p-9 border border-border/70 transition-shadow hover:shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] flex flex-col h-full"
           >
-            <h3 className="text-xl font-semibold text-foreground">{offer.title}</h3>
-            <p className="text-muted-foreground leading-relaxed">{offer.description}</p>
+            <h3 className="text-xl font-semibold text-foreground mb-3">{offer.title}</h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">{offer.description}</p>
 
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full mb-4">
               <AccordionItem value="details" className="border-none">
                 <AccordionTrigger className="text-sm font-medium text-primary hover:no-underline py-2 justify-start gap-2">
                   Details
@@ -73,15 +73,12 @@ const OffersSection = () => (
               </AccordionItem>
             </Accordion>
 
-            <div className="mt-auto pt-2">
+            <div className="mt-auto pt-4">
               <a
                 href={offer.href}
-                {...(offer.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className={`inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors px-6 py-2.5 ${
-                  offer.external
-                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                    : "border border-border text-muted-foreground hover:bg-secondary hover:text-foreground"
-                }`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors px-6 py-2.5 bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 {offer.cta}
               </a>

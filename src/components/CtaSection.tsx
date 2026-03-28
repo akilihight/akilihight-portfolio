@@ -4,11 +4,11 @@ const CtaSection = () => (
       <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-10">
         Start with a conversation.
       </h2>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#" className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
+      <div className="flex flex-col sm:flex-row gap-5 justify-center">
+        <a href="#" className="inline-flex items-center justify-center rounded-lg bg-primary px-10 py-4 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90">
           Book a Clarity Session
         </a>
-        <a href="#" className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-3.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">
+        <a href="#" className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-4 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">
           Reach Out
         </a>
       </div>

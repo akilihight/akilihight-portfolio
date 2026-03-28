@@ -5,7 +5,7 @@ const points = [
 ];
 
 const HowIHelpSection = () => (
-  <section className="py-32">
+  <section className="py-32 bg-secondary/40">
     <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
       <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-10">How I Help</h2>
       <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">

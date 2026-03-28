@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import WhatIDoSection from "@/components/WhatIDoSection";
 import OffersSection from "@/components/OffersSection";
@@ -7,15 +8,18 @@ import AboutSection from "@/components/AboutSection";
 import CtaSection from "@/components/CtaSection";
 
 const Index = () => (
-  <main>
-    <HeroSection />
-    <WhatIDoSection />
-    <OffersSection />
-    <HowIWorkSection />
-    <EcosystemSection />
-    <AboutSection />
-    <CtaSection />
-  </main>
+  <>
+    <Header />
+    <main>
+      <HeroSection />
+      <WhatIDoSection />
+      <OffersSection />
+      <HowIWorkSection />
+      <EcosystemSection />
+      <AboutSection />
+      <CtaSection />
+    </main>
+  </>
 );
 
 export default Index;

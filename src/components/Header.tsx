@@ -7,7 +7,7 @@ const Header = () => (
         <img
           src={akiliLogo}
           alt="Akili Hight"
-          className="h-14 w-auto"
+          className="h-[4.5rem] w-auto"
           width={300}
           height={56}
         />

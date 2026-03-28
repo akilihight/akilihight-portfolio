@@ -9,7 +9,7 @@ const AboutSection = () => (
             <img
               src={akiliAbout}
               alt="Akili Hight"
-              className="rounded-xl w-full max-w-md object-cover"
+              className="rounded-xl w-full max-w-lg object-cover"
               loading="lazy"
               width={800}
               height={1024}
@@ -25,16 +25,16 @@ const AboutSection = () => (
             <p>
               That includes cloud modernization, data platforms, infrastructure, and large-scale digital initiatives tied to mission-critical systems.
             </p>
-            <p>Over time, one pattern has shown up again and again.</p>
+            <p>Over time, one pattern shows up again and again.</p>
             <p>
               Most problems are not caused by lack of effort. They come from lack of clarity, misalignment, or too many moving parts.
             </p>
-            <p>That is the work I focus on now.</p>
+            <p>That's the work I focus on now.</p>
             <p>
               I help people, founders, and teams get clear on what matters, cut through the noise, and move forward with practical next steps.
             </p>
             <p>
-              Sometimes that connects to enterprise systems, AI readiness, or structured transformation. Sometimes it is much simpler.
+              Sometimes that connects to enterprise systems, AI readiness, or structured transformation. Sometimes it's simpler.
             </p>
             <p className="text-foreground font-medium">
               The goal is the same either way: clarity you can act on.

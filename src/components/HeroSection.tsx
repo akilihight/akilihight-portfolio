@@ -5,10 +5,10 @@ const HeroSection = () => (
     <div className="container mx-auto px-6 lg:px-16 py-20">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div className="space-y-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] text-foreground">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.08] text-foreground">
             I help you get clear, get aligned, and move forward.
           </h1>
-          <p className="text-lg text-muted-foreground/70 leading-relaxed max-w-lg">
+          <p className="text-lg md:text-xl text-muted-foreground/70 leading-relaxed max-w-lg">
             For people, founders, and teams who feel stuck, pulled in too many directions, or unsure what the next move should be.
           </p>
           <div className="flex flex-col sm:flex-row gap-5">
@@ -24,13 +24,7 @@ const HeroSection = () => (
               href="#offers"
               className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-4 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
             >
-              Get an AI Readiness Snapshot
-            </a>
-            <a
-              href="#offers"
-              className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-4 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-            >
-              Fix a Stuck Project
+              Explore Services
             </a>
           </div>
         </div>
@@ -39,9 +33,9 @@ const HeroSection = () => (
             <img
               src={akiliHero}
               alt="Akili Hight in a thoughtful pose"
-              className="rounded-xl w-full max-w-lg object-cover"
-              width={640}
-              height={800}
+              className="rounded-xl w-full max-w-xl object-cover"
+              width={720}
+              height={900}
             />
           </div>
         </div>

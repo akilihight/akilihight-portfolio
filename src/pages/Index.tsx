@@ -4,6 +4,7 @@ import WhatIDoSection from "@/components/WhatIDoSection";
 import OffersSection from "@/components/OffersSection";
 import HowIHelpSection from "@/components/HowIHelpSection";
 import HowIThinkSection from "@/components/HowIThinkSection";
+import HowItAllComesTogetherSection from "@/components/HowItAllComesTogetherSection";
 import HowIWorkSection from "@/components/HowIWorkSection";
 import EcosystemSection from "@/components/EcosystemSection";
 import FeaturedInSection from "@/components/FeaturedInSection";

@@ -6,6 +6,7 @@ import HowIHelpSection from "@/components/HowIHelpSection";
 import HowIThinkSection from "@/components/HowIThinkSection";
 import HowIWorkSection from "@/components/HowIWorkSection";
 import EcosystemSection from "@/components/EcosystemSection";
+import FeaturedInSection from "@/components/FeaturedInSection";
 import AboutSection from "@/components/AboutSection";
 import CtaSection from "@/components/CtaSection";
 
@@ -20,6 +21,7 @@ const Index = () => (
       <HowIThinkSection />
       <HowIWorkSection />
       <EcosystemSection />
+      <FeaturedInSection />
       <AboutSection />
       <CtaSection />
     </main>

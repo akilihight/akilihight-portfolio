@@ -21,6 +21,7 @@ const Index = () => (
       <HowIThinkSection />
       <HowIWorkSection />
       <EcosystemSection />
+      <FeaturedInSection />
       <AboutSection />
       <CtaSection />
     </main>

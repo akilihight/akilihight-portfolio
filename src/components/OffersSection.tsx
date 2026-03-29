@@ -8,7 +8,7 @@ import {
 const offers = [
   {
     title: "Clarity Session",
-    description: "Walk away with a clear plan and next steps you can actually act on.",
+    description: "A focused 30-minute conversation to help you get clear on what you're dealing with and what to do next.",
     detail: "A focused 30-minute introductory call for people who need help sorting through a situation, challenge, or next move.",
     bestFor: "Founders, professionals, creators, and teams who feel stuck or pulled in too many directions.",
     outcome: "Clarity on what is going on, what matters most, and what to do next.",
@@ -18,7 +18,7 @@ const offers = [
   },
   {
     title: "AI Readiness Snapshot",
-    description: "Understand where AI actually fits in your business and what to do about it.",
+    description: "A structured view of where you actually stand before making AI or cloud decisions.",
     detail: "A focused review for organizations exploring AI but unsure where to begin, what is missing, or what needs to be true before moving forward.",
     bestFor: "Teams, leaders, and organizations navigating AI, data, and operational readiness.",
     outcome: "A clearer view of risks, gaps, and next steps.",
@@ -28,7 +28,7 @@ const offers = [
   },
   {
     title: "Execution Reset",
-    description: "Fix what's stuck, remove confusion, and get things moving again.",
+    description: "A practical reset to bring clarity, alignment, and forward momentum to what you're working on.",
     detail: "A practical reset for projects, priorities, or initiatives that feel unclear, stalled, or out of sync.",
     bestFor: "Teams and leaders dealing with drift, confusion, or too many moving parts.",
     outcome: "A clearer path, sharper priorities, and a more workable next step.",

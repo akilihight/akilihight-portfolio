@@ -9,10 +9,11 @@ const HeroSection = () => (
             I help you get clear, get aligned, and move forward.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground/70 leading-relaxed max-w-lg">
-            For people, founders, and teams who feel stuck, pulled in too many directions, or unsure what the next move should be.
+            For builders, leaders, and creators dealing with complexity, competing priorities, or unclear next steps.
           </p>
           <div className="flex flex-col sm:flex-row gap-5 items-start">
             <div className="flex flex-col gap-2">
+              <span className="text-sm text-muted-foreground/60 pl-1">Not sure where to start? Start here.</span>
               <a
                 href="https://calendly.com/hightnetworksconsulting/30min"
                 target="_blank"
@@ -21,7 +22,7 @@ const HeroSection = () => (
               >
                 Book a Free Intro Call
               </a>
-              <span className="text-sm text-muted-foreground/60 pl-1">Free 30-minute introductory call</span>
+              <span className="text-sm text-muted-foreground/60 pl-1">Free 30-minute conversation. No pressure. Just clarity.</span>
             </div>
             <a
               href="#offers"

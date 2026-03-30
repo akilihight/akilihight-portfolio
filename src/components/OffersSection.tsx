@@ -5,36 +5,44 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const CALENDLY_LINK = "https://calendly.com/hightnetworksconsulting/30min";
+
 const offers = [
   {
-    title: "Clarity Session",
-    description: "A focused 30-minute conversation to help you get clear on what you're dealing with and what to do next.",
-    detail: "A focused 30-minute introductory call for people who need help sorting through a situation, challenge, or next move.",
-    bestFor: "Founders, professionals, creators, and teams who feel stuck or pulled in too many directions.",
-    outcome: "Clarity on what is going on, what matters most, and what to do next.",
+    title: "Start Here: Clarity Session",
+    description:
+      "If you are dealing with something complex, unclear, or stuck, this is the place to begin.\n\nWe break it down, identify what matters, and map out what to do next.",
+    detail:
+      "A focused 30-minute introductory call for people who need help sorting through a situation, challenge, or next move.",
+    bestFor:
+      "Founders, professionals, creators, and teams who feel stuck or pulled in too many directions.",
+    outcome: "Clarity you can act on immediately.",
     cta: "Book a Free Intro Call",
-    href: "https://calendly.com/hightnetworksconsulting/30min",
-    external: true,
+    href: CALENDLY_LINK,
   },
   {
     title: "AI Readiness Snapshot",
-    description: "A structured view of where you actually stand before making AI or cloud decisions.",
-    detail: "A focused review for organizations exploring AI but unsure where to begin, what is missing, or what needs to be true before moving forward.",
-    bestFor: "Teams, leaders, and organizations navigating AI, data, and operational readiness.",
-    outcome: "A clearer view of risks, gaps, and next steps.",
-    cta: "Visit CloudBait Navigator",
-    href: "https://cloudbait.io/",
-    external: true,
+    description:
+      "If your questions involve AI, data, or systems, this goes deeper.\n\nWe look at where things actually stand, what is missing, and what needs to be true before moving forward.",
+    detail:
+      "A focused review for organizations exploring AI but unsure where to begin, what is missing, or what needs to be true before moving forward.",
+    bestFor:
+      "Teams, leaders, and organizations navigating AI, data, and operational readiness.",
+    outcome: "A clear view of risks, gaps, and next steps.",
+    cta: "Start with a Clarity Session",
+    href: CALENDLY_LINK,
   },
   {
     title: "Execution Reset",
-    description: "A practical reset to bring clarity, alignment, and forward momentum to what you're working on.",
-    detail: "A practical reset for projects, priorities, or initiatives that feel unclear, stalled, or out of sync.",
-    bestFor: "Teams and leaders dealing with drift, confusion, or too many moving parts.",
-    outcome: "A clearer path, sharper priorities, and a more workable next step.",
-    cta: "Visit Project Navigator",
-    href: "https://projectnavigator.ai/",
-    external: true,
+    description:
+      "If something is already in motion but not working, this is where we fix it.\n\nWe cut through confusion, realign priorities, and get things moving again.",
+    detail:
+      "A practical reset for projects, priorities, or initiatives that feel unclear, stalled, or out of sync.",
+    bestFor:
+      "Teams and leaders dealing with drift, confusion, or too many moving parts.",
+    outcome: "A clear path forward with practical next steps.",
+    cta: "Start with a Clarity Session",
+    href: CALENDLY_LINK,
   },
 ];
 
@@ -44,15 +52,28 @@ const OffersSection = () => (
       <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
         Here are a few ways I can help, depending on what you're dealing with.
       </p>
-      <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-14">Offers</h2>
-      <div className="grid md:grid-cols-3 gap-8">
+      <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-14">
+        Offers
+      </h2>
+      <div className="grid md:grid-cols-3 gap-8 items-stretch">
         {offers.map((offer) => (
           <div
             key={offer.title}
             className="bg-card rounded-xl p-9 border border-border/70 transition-shadow hover:shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] flex flex-col h-full"
           >
-            <h3 className="text-xl font-semibold text-foreground mb-3">{offer.title}</h3>
-            <p className="text-muted-foreground leading-relaxed mb-4">{offer.description}</p>
+            <h3 className="text-xl font-semibold text-foreground mb-3">
+              {offer.title}
+            </h3>
+
+            <div className="text-muted-foreground leading-relaxed mb-4 space-y-3">
+              {offer.description.split("\n\n").map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+
+            <p className="text-sm font-medium text-foreground mb-4">
+              <span className="text-primary">Outcome:</span> {offer.outcome}
+            </p>
 
             <Accordion type="single" collapsible className="w-full mb-4">
               <AccordionItem value="details" className="border-none">
@@ -63,10 +84,10 @@ const OffersSection = () => (
                   <div className="space-y-3 text-sm text-muted-foreground pt-1">
                     <p>{offer.detail}</p>
                     <p>
-                      <span className="font-medium text-foreground">Best for:</span> {offer.bestFor}
-                    </p>
-                    <p>
-                      <span className="font-medium text-foreground">Outcome:</span> {offer.outcome}
+                      <span className="font-medium text-foreground">
+                        Best for:
+                      </span>{" "}
+                      {offer.bestFor}
                     </p>
                   </div>
                 </AccordionContent>

@@ -42,7 +42,7 @@ const HowItAllComesTogetherSection = () => (
         <div className="w-full max-w-4xl rounded-xl overflow-hidden shadow-sm border border-border/40">
           <div className="relative" style={{ paddingBottom: "56.25%" }}>
             <iframe
-              src="https://www.youtube.com/embed/dueFNDnF9V8"
+              src="https://www.youtube.com/embed/qJPuEI8jngQ"
               title="The full story behind the work — Akili Hight"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

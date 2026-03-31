@@ -4,6 +4,7 @@ import WhatIDoSection from "@/components/WhatIDoSection";
 import OffersSection from "@/components/OffersSection";
 import HowIHelpSection from "@/components/HowIHelpSection";
 import HowIThinkSection from "@/components/HowIThinkSection";
+import HowIProcessSection from "@/components/HowIProcessSection";
 import HowItAllComesTogetherSection from "@/components/HowItAllComesTogetherSection";
 import HowIWorkSection from "@/components/HowIWorkSection";
 import EcosystemSection from "@/components/EcosystemSection";
@@ -21,6 +22,7 @@ const Index = () => (
       <HowIHelpSection />
       <HowIWorkSection />
       <HowIThinkSection />
+      <HowIProcessSection />
       <HowItAllComesTogetherSection />
       <FeaturedInSection />
       <EcosystemSection />

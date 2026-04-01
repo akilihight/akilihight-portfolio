@@ -32,10 +32,10 @@ const HowIWorkSection = () => (
         How I Work
       </h2>
       <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-14">
-        When something feels unclear, the goal is not to rush. It is to slow things down, understand what matters, and move forward with intention.
+        When something feels unclear, the goal is not to force it. It is to slow things down, read the moment, and move with intention.
       </p>
 
-      <ul className="space-y-10 mb-20">
+      <ul className="space-y-10 mb-14">
         {principles.map((p) => (
           <li key={p.title} className="flex gap-4">
             <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-3" />
@@ -55,7 +55,7 @@ const HowIWorkSection = () => (
         <h3 className="text-xl font-semibold text-foreground mb-6">
           When something feels unclear, we work through it by:
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
           {steps.map((step) => (
             <div key={step.label} className="space-y-1.5">
               <h4 className="text-lg font-semibold text-foreground">{step.label}</h4>

@@ -32,7 +32,7 @@ const HowIWorkSection = () => (
         How I Work
       </h2>
       <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-14">
-        When something feels unclear, the goal is not to rush. It is to slow things down, understand what matters, and move forward with intention.
+        When something feels unclear, the goal is not to force it. It is to slow things down, read the moment, and move with intention.
       </p>
 
       <ul className="space-y-10 mb-20">

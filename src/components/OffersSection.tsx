@@ -41,7 +41,7 @@ const offers = [
     bestFor:
       "Teams and leaders dealing with drift, confusion, or too many moving parts.",
     outcome: "A clear path forward with practical next steps.",
-    cta: "Explore Execution Reset",
+    cta: "Visit Project Navigator",
     href: "https://projectnavigator.ai",
   },
 ];

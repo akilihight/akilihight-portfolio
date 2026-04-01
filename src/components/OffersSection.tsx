@@ -29,8 +29,8 @@ const offers = [
     bestFor:
       "Teams, leaders, and organizations navigating AI, data, and operational readiness.",
     outcome: "A clear view of risks, gaps, and next steps.",
-    cta: "Start with a Clarity Session",
-    href: CALENDLY_LINK,
+    cta: "Explore AI Readiness",
+    href: "https://cloudbait.io",
   },
   {
     title: "Execution Reset",
@@ -41,8 +41,8 @@ const offers = [
     bestFor:
       "Teams and leaders dealing with drift, confusion, or too many moving parts.",
     outcome: "A clear path forward with practical next steps.",
-    cta: "Start with a Clarity Session",
-    href: CALENDLY_LINK,
+    cta: "Explore Execution Reset",
+    href: "https://projectnavigator.ai",
   },
 ];
 

@@ -41,7 +41,7 @@ const offers = [
     bestFor:
       "Teams and leaders dealing with drift, confusion, or too many moving parts.",
     outcome: "A clear path forward with practical next steps.",
-    cta: "Explore Execution Reset",
+    cta: "Visit Project Navigator",
     href: "https://projectnavigator.ai",
   },
 ];
@@ -61,45 +61,48 @@ const OffersSection = () => (
             key={offer.title}
             className="bg-card rounded-xl p-9 border border-border/70 transition-shadow hover:shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] flex flex-col h-full"
           >
-            <h3 className="text-xl font-semibold text-foreground mb-3">
-              {offer.title}
-            </h3>
-
-            <div className="text-muted-foreground leading-relaxed mb-4 space-y-3">
-              {offer.description.split("\n\n").map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
+            {/* Top: title + description (grows to fill) */}
+            <div className="flex-1">
+              <h3 className="text-xl font-semibold text-foreground mb-3">
+                {offer.title}
+              </h3>
+              <div className="text-muted-foreground leading-relaxed space-y-3">
+                {offer.description.split("\n\n").map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
             </div>
 
-            <p className="text-sm font-medium text-foreground mb-4">
-              <span className="text-primary">Outcome:</span> {offer.outcome}
-            </p>
+            {/* Anchored bottom: outcome → details → CTA */}
+            <div className="pt-6">
+              <p className="text-sm font-medium text-foreground mb-4">
+                <span className="text-primary">Outcome:</span> {offer.outcome}
+              </p>
 
-            <Accordion type="single" collapsible className="w-full mb-4">
-              <AccordionItem value="details" className="border-none">
-                <AccordionTrigger className="text-sm font-medium text-primary hover:no-underline py-2 justify-start gap-2">
-                  Details
-                </AccordionTrigger>
-                <AccordionContent>
-                  <div className="space-y-3 text-sm text-muted-foreground pt-1">
-                    <p>{offer.detail}</p>
-                    <p>
-                      <span className="font-medium text-foreground">
-                        Best for:
-                      </span>{" "}
-                      {offer.bestFor}
-                    </p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+              <Accordion type="single" collapsible className="w-full mb-4">
+                <AccordionItem value="details" className="border-none">
+                  <AccordionTrigger className="text-sm font-medium text-primary hover:no-underline py-2 justify-start gap-2">
+                    Details
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-3 text-sm text-muted-foreground pt-1">
+                      <p>{offer.detail}</p>
+                      <p>
+                        <span className="font-medium text-foreground">
+                          Best for:
+                        </span>{" "}
+                        {offer.bestFor}
+                      </p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
 
-            <div className="mt-auto pt-4">
               <a
                 href={offer.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors px-6 py-2.5 bg-primary text-primary-foreground hover:bg-primary/90"
+                className="inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors px-6 py-2.5 bg-primary text-primary-foreground hover:bg-primary/90 whitespace-nowrap"
               >
                 {offer.cta}
               </a>

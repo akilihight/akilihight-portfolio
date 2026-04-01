@@ -55,22 +55,22 @@ const OffersSection = () => (
       <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-14">
         Start where it fits your situation.
       </p>
-      <div className="grid md:grid-cols-3 gap-8 items-stretch">
+      <div className="grid md:grid-cols-3 gap-8">
         {offers.map((offer) => (
           <div
             key={offer.title}
-            className="bg-card rounded-xl p-9 border border-border/70 transition-shadow hover:shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] flex flex-col h-full"
+            className="bg-card rounded-xl p-9 border border-border/70 transition-shadow hover:shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] flex flex-col"
           >
-            {/* Top: title + description (grows to fill) */}
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-foreground mb-3">
-                {offer.title}
-              </h3>
-              <div className="text-muted-foreground leading-relaxed space-y-3">
-                {offer.description.split("\n\n").map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
-              </div>
+            {/* Title */}
+            <h3 className="text-xl font-semibold text-foreground mb-3">
+              {offer.title}
+            </h3>
+
+            {/* Description — this section grows to absorb height differences */}
+            <div className="text-muted-foreground leading-relaxed space-y-3 flex-1">
+              {offer.description.split("\n\n").map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
 
             {/* Anchored bottom: outcome → details → CTA */}

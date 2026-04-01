@@ -62,7 +62,7 @@ const OffersSection = () => (
             className="bg-card rounded-xl p-9 border border-border/70 transition-shadow hover:shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] flex flex-col h-full"
           >
             {/* Top zone: title + description — fixed min-height locks bottom zone position */}
-            <div className="min-h-[220px]">
+            <div className="min-h-[220px] flex-1">
               <h3 className="text-xl font-semibold text-foreground mb-3 min-h-[56px]">
                 {offer.title}
               </h3>

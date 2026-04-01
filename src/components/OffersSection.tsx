@@ -59,22 +59,22 @@ const OffersSection = () => (
         {offers.map((offer) => (
           <div
             key={offer.title}
-            className="bg-card rounded-xl p-9 border border-border/70 transition-shadow hover:shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] flex flex-col"
+            className="bg-card rounded-xl p-9 border border-border/70 transition-shadow hover:shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] flex flex-col h-full"
           >
-            {/* Title */}
-            <h3 className="text-xl font-semibold text-foreground mb-3">
-              {offer.title}
-            </h3>
-
-            {/* Description — this section grows to absorb height differences */}
-            <div className="text-muted-foreground leading-relaxed space-y-3 flex-1">
-              {offer.description.split("\n\n").map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
+            {/* Top zone: title + description — fixed min-height locks bottom zone position */}
+            <div className="min-h-[220px]">
+              <h3 className="text-xl font-semibold text-foreground mb-3">
+                {offer.title}
+              </h3>
+              <div className="text-muted-foreground leading-relaxed space-y-3">
+                {offer.description.split("\n\n").map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
             </div>
 
-            {/* Anchored bottom: outcome → details → CTA */}
-            <div className="pt-6">
+            {/* Bottom zone: outcome → details → CTA — anchored via mt-auto */}
+            <div className="mt-auto flex flex-col pt-6">
               <p className="text-sm font-medium text-foreground mb-4">
                 <span className="text-primary">Outcome:</span> {offer.outcome}
               </p>

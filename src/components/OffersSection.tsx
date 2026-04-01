@@ -49,12 +49,12 @@ const offers = [
 const OffersSection = () => (
   <section id="offers" className="py-36">
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
-      <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
-        Here are a few ways I can help, depending on what you're dealing with.
-      </p>
-      <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-14">
+      <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">
         Offers
       </h2>
+      <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-14">
+        Start where it fits your situation.
+      </p>
       <div className="grid md:grid-cols-3 gap-8 items-stretch">
         {offers.map((offer) => (
           <div

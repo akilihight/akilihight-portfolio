@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const books = [
   {
     title: "The 50th Law",
+    url: "https://www.amazon.com/50th-Law-50-Cent/dp/006177460X",
     summary: "A guide to fearlessness and strategic thinking.",
     insights: [
       "Fear is the biggest obstacle to clarity.",
@@ -12,6 +13,7 @@ const books = [
   },
   {
     title: "Sell or Be Sold",
+    url: "https://www.amazon.com/Sell-Be-Sold-Your-Business/dp/1608322904",
     summary: "A framework for influence and clear communication.",
     insights: [
       "Every interaction involves selling a vision or direction.",
@@ -21,6 +23,7 @@ const books = [
   },
   {
     title: "The Science of Getting Rich",
+    url: "https://www.amazon.com/Science-Getting-Rich-Wallace-Wattles/dp/1594625867",
     summary: "Principle-based thinking for building with intention.",
     insights: [
       "Clarity of thought precedes clarity of action.",
@@ -28,6 +31,13 @@ const books = [
     ],
     practice: "Focus on what you can build, not what others are doing.",
   },
+];
+
+const steps = [
+  { label: "Pause", desc: "Step back from the noise." },
+  { label: "Clarify", desc: "Look at what is actually going on." },
+  { label: "Connect", desc: "Identify the patterns, priorities, and pressure points." },
+  { label: "Move", desc: "Decide the next practical step." },
 ];
 
 const CALENDLY_LINK = "https://calendly.com/hightnetworksconsulting/30min";
@@ -38,82 +48,56 @@ const HowIProcessSection = () => (
       {/* Title & Intro */}
       <div>
         <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
-          How I Process and Apply
+          How We Work Through It
         </h2>
-        <div className="text-lg text-muted-foreground leading-loose space-y-3">
-          <p>
-            I don't just consume information.
-            <br />
-            I take time to process it, connect it, and figure out what actually matters.
-          </p>
-          <p>In a fast-moving world, clarity comes from thinking clearly, not moving faster.</p>
-        </div>
+        <p className="text-lg text-muted-foreground leading-relaxed">
+          When something feels unclear, we slow it down, sort through it, and focus on what matters most.
+        </p>
       </div>
 
-      {/* My Approach */}
+      {/* Framework */}
       <div>
-        <h3 className="text-xl font-semibold text-foreground mb-4">My Approach</h3>
-        <div className="text-base text-muted-foreground leading-loose space-y-4">
-          <p>My approach is simple:</p>
-          <p className="text-foreground font-medium tracking-wide">Pause. Reflect. Document.</p>
-          <ul className="list-disc list-inside space-y-1.5 pl-1">
-            <li>Step away from noise</li>
-            <li>Look at the bigger picture</li>
-            <li>Write things down</li>
-            <li>Connect the dots</li>
-          </ul>
-          <p>That is where clarity comes from.</p>
-          <p>This is the same approach I bring into every conversation.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {steps.map((step) => (
+            <div key={step.label} className="space-y-1.5">
+              <h3 className="text-lg font-semibold text-foreground">{step.label}</h3>
+              <p className="text-sm text-muted-foreground">{step.desc}</p>
+            </div>
+          ))}
         </div>
-      </div>
-
-      {/* Why This Matters */}
-      <div>
-        <h3 className="text-xl font-semibold text-foreground mb-4">Why This Matters</h3>
-        <div className="text-base text-muted-foreground leading-loose space-y-4">
-          <p>AI is powerful, but most people are still trying to figure out what to do with it.</p>
-          <p>
-            The real gap is not access to tools.
-            <br />
-            It's knowing how to think through problems.
-          </p>
-          <p>
-            The people who move forward are not the ones with the most information.
-            <br />
-            They are the ones asking better questions.
-          </p>
-        </div>
-      </div>
-
-      {/* Connecting the Dots */}
-      <div>
-        <h3 className="text-xl font-semibold text-foreground mb-4">Connecting the Dots</h3>
-        <div className="text-base text-muted-foreground leading-loose space-y-4">
-          <p>Most people feel like their experiences are scattered.</p>
-          <p>They're not.</p>
-          <p>Technology, creativity, business, and personal growth are connected.</p>
-          <p>The advantage comes from seeing how they fit together.</p>
-        </div>
+        <p className="text-sm text-muted-foreground mt-8">
+          This is the process I bring into every clarity session.
+        </p>
       </div>
 
       {/* Learning and Applying */}
       <div>
-        <h3 className="text-xl font-semibold text-foreground mb-5">Learning and Applying</h3>
+        <h3 className="text-xl font-semibold text-foreground mb-2">Learning and Applying</h3>
+        <p className="text-sm text-muted-foreground mb-6">A few ideas that shape this approach</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {books.map((book) => (
             <Card key={book.title} className="flex flex-col h-full border-border/40">
-              <CardContent className="p-6 flex flex-col gap-4">
-                <h4 className="text-lg font-semibold text-foreground">{book.title}</h4>
+              <CardContent className="p-6 flex flex-col flex-1 gap-4">
+                <a
+                  href={book.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
+                >
+                  {book.title}
+                </a>
                 <p className="text-sm text-muted-foreground">{book.summary}</p>
                 <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
                   {book.insights.map((insight, i) => (
                     <li key={i}>{insight}</li>
                   ))}
                 </ul>
-                <p className="text-xs font-medium text-primary/80 uppercase tracking-wider">
-                  In practice
-                </p>
-                <p className="text-sm text-muted-foreground">{book.practice}</p>
+                <div className="mt-auto pt-4">
+                  <p className="text-xs font-medium text-primary/80 uppercase tracking-wider mb-1">
+                    In practice
+                  </p>
+                  <p className="text-sm text-muted-foreground">{book.practice}</p>
+                </div>
               </CardContent>
             </Card>
           ))}

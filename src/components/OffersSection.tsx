@@ -48,7 +48,7 @@ const offers = [
 
 const OffersSection = () => (
   <section id="offers" className="py-36">
-    <div className="container mx-auto px-6 lg:px-16">
+    <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
         Here are a few ways I can help, depending on what you're dealing with.
       </p>

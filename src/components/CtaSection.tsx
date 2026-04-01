@@ -1,6 +1,6 @@
 const CtaSection = () => (
   <section id="cta" className="py-36 bg-secondary/40">
-    <div className="container mx-auto px-6 lg:px-16 text-center max-w-2xl">
+    <div className="container mx-auto px-6 lg:px-16 text-center max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
         Start with clarity
       </h2>

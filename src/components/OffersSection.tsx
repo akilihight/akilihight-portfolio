@@ -63,7 +63,7 @@ const OffersSection = () => (
           >
             {/* Top zone: title + description — fixed min-height locks bottom zone position */}
             <div className="min-h-[220px]">
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-3 min-h-[56px]">
                 {offer.title}
               </h3>
               <div className="text-muted-foreground leading-relaxed space-y-3">

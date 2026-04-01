@@ -28,9 +28,6 @@ const HowIProcessSection = () => (
             </div>
           ))}
         </div>
-        <p className="text-sm text-muted-foreground mt-8">
-          This is the process I bring into every clarity session.
-        </p>
       </div>
 
       <p className="text-base text-muted-foreground leading-loose max-w-2xl">

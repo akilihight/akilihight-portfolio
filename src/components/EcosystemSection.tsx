@@ -9,7 +9,7 @@ const ventures = [
 
 const EcosystemSection = () => (
   <section id="ecosystem" className="py-36 bg-secondary/40">
-    <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
+    <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-5">Ecosystem</h2>
       <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12">
         Different parts of my work live in different places, but they all serve the same goal: helping people move forward with clarity.

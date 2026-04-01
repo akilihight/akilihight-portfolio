@@ -18,7 +18,7 @@ const principles = [
 
 const HowIWorkSection = () => (
   <section className="py-36">
-    <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
+    <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-12">
         How I Work
       </h2>

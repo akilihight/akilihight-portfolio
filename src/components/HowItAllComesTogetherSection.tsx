@@ -1,6 +1,6 @@
 const HowItAllComesTogetherSection = () => (
   <section className="py-36 bg-muted/30">
-    <div className="container mx-auto px-6 lg:px-16 max-w-4xl">
+    <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
         How It All Comes Together
       </h2>

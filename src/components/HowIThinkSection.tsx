@@ -6,7 +6,7 @@ const videos = [
 
 const HowIThinkSection = () => (
   <section className="py-36 bg-background">
-    <div className="container mx-auto px-6 lg:px-16 max-w-6xl">
+    <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">How I Think</h2>
       <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12">
         Sometimes the fastest way to understand how I work is to hear how I think.

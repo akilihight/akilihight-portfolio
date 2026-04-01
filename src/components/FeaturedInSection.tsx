@@ -24,7 +24,7 @@ const FeaturedInSection = () => (
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <div className="border-t border-border/30 mb-16" />
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-        Featured &amp; Recognized
+        In the Press
       </h2>
       <p className="text-lg text-muted-foreground mb-12">
         Independent coverage, press releases, and platform highlights.

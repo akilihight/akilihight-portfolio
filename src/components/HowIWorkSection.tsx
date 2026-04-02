@@ -53,9 +53,9 @@ const HowIWorkSection = () => (
 
       <div>
         <h3 className="text-xl font-semibold text-foreground mb-6">
-          When something feels unclear, we work through it by:
+          When something feels unclear, we work through it by pausing, clarifying, connecting, and moving.
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+        <div className="space-y-6">
           {steps.map((step) => (
             <div key={step.label} className="space-y-1.5">
               <h4 className="text-lg font-semibold text-foreground">{step.label}</h4>
@@ -64,19 +64,6 @@ const HowIWorkSection = () => (
           ))}
         </div>
       </div>
-
-      <p className="text-base text-muted-foreground leading-loose max-w-2xl">
-        If something feels unclear, we can break it down and figure out what to do next.{" "}
-        <a
-          href={CALENDLY_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
-        >
-          Start with a free clarity session
-        </a>
-        .
-      </p>
     </div>
   </section>
 );

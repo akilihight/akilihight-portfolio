@@ -52,17 +52,24 @@ const HowIWorkSection = () => (
       </ul>
 
       <div>
-        <h3 className="text-xl font-semibold text-foreground mb-6">
-          When something feels unclear, we work through it by pausing, clarifying, connecting, and moving.
+        <h3 className="text-xl font-semibold text-foreground mb-10">
+          When something feels unclear:
         </h3>
-        <div className="space-y-6">
+        <ul className="space-y-10">
           {steps.map((step) => (
-            <div key={step.label} className="space-y-1.5">
-              <h4 className="text-lg font-semibold text-foreground">{step.label}</h4>
-              <p className="text-sm text-muted-foreground">{step.desc}</p>
-            </div>
+            <li key={step.label} className="flex gap-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-3" />
+              <div>
+                <p className="text-lg md:text-xl font-medium text-foreground">
+                  {step.label}
+                </p>
+                <p className="text-muted-foreground mt-1.5 leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   </section>

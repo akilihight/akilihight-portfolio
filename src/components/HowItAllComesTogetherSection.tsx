@@ -30,28 +30,6 @@ const HowItAllComesTogetherSection = () => (
         </div>
       </div>
 
-      {/* Video 2 */}
-      <div className="mb-14">
-        <p className="text-sm font-medium text-primary/80 uppercase tracking-wider mb-2">
-          The full story behind the work
-        </p>
-        <p className="text-base text-muted-foreground leading-relaxed mb-6">
-          A deeper look at the path behind my work, from early decisions and
-          discipline to technology, writing, and clarity.
-        </p>
-        <div className="w-full max-w-4xl rounded-xl overflow-hidden shadow-sm border border-border/40">
-          <div className="relative" style={{ paddingBottom: "56.25%" }}>
-            <iframe
-              src="https://www.youtube.com/embed/qJPuEI8jngQ"
-              title="The full story behind the work — Akili Hight"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-            />
-          </div>
-        </div>
-      </div>
-
       <p className="text-base text-muted-foreground leading-relaxed">
         This is the same approach I bring to every conversation: clarity,
         structure, and forward movement.

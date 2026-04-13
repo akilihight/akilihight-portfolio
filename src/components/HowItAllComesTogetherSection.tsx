@@ -1,19 +1,18 @@
 const HowItAllComesTogetherSection = () => (
-  <section className="py-36 bg-muted/30">
+  <section className="py-28 bg-muted/30">
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
         How It All Comes Together
       </h2>
-      <p className="text-lg text-muted-foreground mb-14">
+      <p className="text-lg text-muted-foreground mb-12">
         This is what it looks like when ideas move beyond thinking and turn into something real.
       </p>
 
-      {/* Video 1 */}
-      <div className="mb-16">
+      <div className="mb-10">
         <p className="text-sm font-medium text-primary/80 uppercase tracking-wider mb-2">
           From idea to execution
         </p>
-        <p className="text-base text-muted-foreground leading-relaxed mb-6">
+        <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
           A quick breakdown of how an idea turned into something real, from early
           vision to showing up at Comic-Con.
         </p>
@@ -30,7 +29,7 @@ const HowItAllComesTogetherSection = () => (
         </div>
       </div>
 
-      <p className="text-base text-muted-foreground leading-relaxed">
+      <p className="text-base text-muted-foreground leading-relaxed max-w-2xl">
         This is the same approach I bring to every conversation: clarity,
         structure, and forward movement.
       </p>

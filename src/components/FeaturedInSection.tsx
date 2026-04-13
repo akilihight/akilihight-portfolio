@@ -20,13 +20,13 @@ const features = [
 ];
 
 const FeaturedInSection = () => (
-  <section className="py-36">
+  <section className="py-28">
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
-      <div className="border-t border-border/30 mb-16" />
+      <div className="border-t border-border/30 mb-14" />
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
         In the Press
       </h2>
-      <p className="text-lg text-muted-foreground mb-12">
+      <p className="text-lg text-muted-foreground mb-10">
         Independent coverage, press releases, and platform highlights.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

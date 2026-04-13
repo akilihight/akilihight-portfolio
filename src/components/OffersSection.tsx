@@ -47,34 +47,32 @@ const offers = [
 ];
 
 const OffersSection = () => (
-  <section id="offers" className="py-36">
+  <section id="offers" className="py-28">
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">
         Offers
       </h2>
-      <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-14">
+      <p className="text-lg text-muted-foreground leading-relaxed mb-12">
         Start where it fits your situation.
       </p>
       <div className="grid md:grid-cols-3 gap-8">
         {offers.map((offer) => (
           <div
             key={offer.title}
-            className="bg-card rounded-xl p-9 border border-border/70 transition-shadow hover:shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] flex flex-col h-full"
+            className="bg-card rounded-xl p-8 border border-border/70 transition-shadow hover:shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] flex flex-col h-full"
           >
-            {/* Top zone: title + description — fixed min-height locks bottom zone position */}
-            <div className="min-h-[220px] flex-1">
+            <div className="min-h-[200px] flex-1">
               <h3 className="text-xl font-semibold text-foreground mb-3 min-h-[56px]">
                 {offer.title}
               </h3>
-              <div className="text-muted-foreground leading-relaxed space-y-3">
+              <div className="text-muted-foreground leading-relaxed space-y-3 text-[15px]">
                 {offer.description.split("\n\n").map((p, i) => (
                   <p key={i}>{p}</p>
                 ))}
               </div>
             </div>
 
-            {/* Bottom zone: outcome → details → CTA — anchored via mt-auto */}
-            <div className="mt-auto flex flex-col pt-6">
+            <div className="mt-auto flex flex-col pt-5">
               <p className="text-sm font-medium text-foreground mb-4">
                 <span className="text-primary">Outcome:</span> {offer.outcome}
               </p>

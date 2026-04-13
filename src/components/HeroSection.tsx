@@ -9,7 +9,7 @@ const HeroSection = () => (
             I help you get clear, get aligned, and move forward.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground/70 leading-relaxed max-w-md">
-            For builders, leaders, and creators dealing with complexity, competing priorities, or unclear next steps.
+            For founders, builders, and creators who already have the substance — and need help turning it into something clear, aligned, and actionable.
           </p>
           <div className="space-y-2.5">
             <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">

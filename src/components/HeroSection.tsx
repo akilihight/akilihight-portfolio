@@ -4,16 +4,15 @@ const HeroSection = () => (
   <section className="min-h-[90vh] flex items-center bg-gradient-to-b from-background to-secondary/50">
     <div className="container mx-auto px-6 lg:px-16 py-20">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <div className="space-y-10">
+        <div className="space-y-8">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.08] text-foreground">
             I help you get clear, get aligned, and move forward.
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground/70 leading-relaxed max-w-lg">
+          <p className="text-lg md:text-xl text-muted-foreground/70 leading-relaxed max-w-md">
             For builders, leaders, and creators dealing with complexity, competing priorities, or unclear next steps.
           </p>
-          <div className="space-y-3">
-            <p className="text-sm text-muted-foreground/60">Not sure where to start? Start here.</p>
-            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+          <div className="space-y-2.5">
+            <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
               <a
                 href="https://calendly.com/hightnetworksconsulting/30min"
                 target="_blank"
@@ -29,7 +28,9 @@ const HeroSection = () => (
                 Explore Services
               </a>
             </div>
-            <p className="text-sm text-muted-foreground/60">Free 30-minute conversation.</p>
+            <p className="text-sm text-muted-foreground/50">
+              Free 30-minute conversation — no commitment, just clarity.
+            </p>
           </div>
         </div>
         <div className="flex justify-center lg:justify-end">

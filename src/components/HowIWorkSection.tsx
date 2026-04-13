@@ -17,24 +17,24 @@ const principles = [
 ];
 
 const HowIWorkSection = () => (
-  <section className="py-36">
-    <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
-      <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
+  <section className="py-28">
+    <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
+      <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-5">
         How I Work
       </h2>
-      <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-14">
+      <p className="text-lg text-muted-foreground leading-relaxed mb-12">
         When something feels unclear, the goal is not to force it. It is to slow things down, read the moment, and move with intention.
       </p>
 
-      <ul className="space-y-10">
+      <ul className="space-y-8">
         {principles.map((p) => (
           <li key={p.title} className="flex gap-4">
             <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-3" />
             <div>
-              <p className="text-lg md:text-xl font-medium text-foreground">
+              <p className="text-lg font-medium text-foreground">
                 {p.title}
               </p>
-              <p className="text-muted-foreground mt-1.5 leading-relaxed">
+              <p className="text-muted-foreground mt-1 leading-relaxed">
                 {p.detail}
               </p>
             </div>

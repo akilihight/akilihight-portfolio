@@ -4,16 +4,15 @@ const HowIHelpSection = () => (
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-8">How I Help</h2>
       <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
         <p>
-          I help you see what's actually going on, separate what matters from what doesn't,
-          and decide what to do next.
+          I help you step back, see what you're actually working with, and figure out what matters most right now.
         </p>
         <p>
-          We break things down, remove the noise, and focus on what moves things forward.
+          We clarify your positioning, organize what you've built, and define the next steps that actually move things forward.
         </p>
         <p>
-          Sometimes that means structure. Sometimes tools. Sometimes a shift in perspective.
+          Sometimes that means packaging your expertise. Sometimes restructuring a plan. Sometimes just naming the real problem.
         </p>
-        <p className="text-foreground font-medium">The outcome is always the same: clarity you can act on.</p>
+        <p className="text-foreground font-medium">The outcome is always the same: direction you can act on.</p>
       </div>
     </div>
   </section>

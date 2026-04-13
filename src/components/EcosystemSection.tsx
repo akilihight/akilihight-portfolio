@@ -1,9 +1,9 @@
 const ventures = [
   { name: "Hight Networks", desc: "Advisory", url: "https://www.hightnetworks.com/" },
-  { name: "CloudBait Navigator", desc: "Readiness", url: "https://cloudbait.io/" },
-  { name: "Project Navigator", desc: "Execution", url: "https://projectnavigator.ai/" },
-  { name: "Gritletter", desc: "Insights", url: "https://gritletter.co/" },
-  { name: "Lucid Futurism", desc: "Creative", url: "https://www.lucidfuturism.com/" },
+  { name: "CloudBait Navigator", desc: "AI readiness", url: "https://cloudbait.io/" },
+  { name: "Project Navigator", desc: "Initiative execution", url: "https://projectnavigator.ai/" },
+  { name: "Clarity Snapshot", desc: "Self-assessment", url: "https://gritletternewsletter.com/" },
+  { name: "Lucid Futurism", desc: "Creative IP", url: "https://www.lucidfuturism.com/" },
   { name: "Lucid Lounge", desc: "Physical space", url: "https://lucidlounge.lovable.app/" },
 ];
 
@@ -12,7 +12,7 @@ const EcosystemSection = () => (
     <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">Ecosystem</h2>
       <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-        Different parts of my work live in different places, but they all serve the same goal: helping people move forward with clarity.
+        Each part of this ecosystem supports a different stage of the same work — from assessing readiness and building structure, to executing with clarity and expressing creative direction.
       </p>
       <ul className="space-y-5">
         {ventures.map((v) => (

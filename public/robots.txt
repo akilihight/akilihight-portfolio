@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://akilihight.lovable.app/sitemap.xml
+Sitemap: https://akilihight.com/sitemap.xml

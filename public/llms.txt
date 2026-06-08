@@ -1,0 +1,10 @@
+# Akili Hight
+
+> Clarity, AI readiness, and practical execution for people, founders, and teams. Workshops and 1:1 guidance to help you understand AI, build confidence, and move forward with structure.
+
+Akili Hight helps individuals, founders, and teams cut through complexity, align priorities, and take clear next steps. The site offers free intro calls, educational workshops on everyday AI, and information about Akili's broader ecosystem of work.
+
+## Pages
+
+- [Home](/): Overview of Akili's approach to clarity, AI readiness, and execution, with intro to services and ecosystem.
+- [Workshops](/workshops): Current and upcoming educational workshops — including "Everyday AI Made Simple" — for learning practical AI use.

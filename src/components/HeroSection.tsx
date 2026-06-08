@@ -22,7 +22,7 @@ const HeroSection = () => (
                 Book a Free Intro Call
               </a>
               <a
-                href="#workshop"
+                href="/workshops"
                 className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-4 text-base font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
               >
                 Explore Workshops

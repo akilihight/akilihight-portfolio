@@ -1,15 +1,15 @@
-import akiliLogo from "@/assets/akili-logo.png";
+import ahMonogram from "@/assets/ah-monogram.png.asset.json";
 
 const Header = () => (
   <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-    <div className="container mx-auto px-6 lg:px-16 flex items-center justify-between h-18">
-      <a href="/" className="block">
+    <div className="container mx-auto px-6 lg:px-16 flex items-center justify-between h-20">
+      <a href="/" className="flex items-center -my-4" aria-label="Akili Hight — Home">
         <img
-          src={akiliLogo}
+          src={ahMonogram.url}
           alt="Akili Hight"
-          className="h-[4.5rem] w-auto"
-          width={300}
-          height={56}
+          className="h-24 md:h-28 w-auto object-contain"
+          width={400}
+          height={400}
         />
       </a>
       <nav className="hidden md:flex items-center gap-8">

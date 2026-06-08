@@ -20,21 +20,13 @@ const AboutSection = () => (
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground">About</h2>
           <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
             <p>
-              I've spent over 20 years leading technology and transformation work across healthcare and other regulated environments.
+              Akili Hight is a technology consultant, author, speaker, and educator with more than 20 years of experience helping people and organizations navigate technology, digital transformation, and emerging technology.
             </p>
             <p>
-              That includes cloud modernization, data platforms, infrastructure, and large-scale digital initiatives tied to mission-critical systems.
+              Through AkiliHight.com, he helps everyday learners, founders, builders, and professionals build clarity and confidence in the AI era.
             </p>
-            <p>Over time, one pattern shows up again and again.</p>
-            <p>
-              Most problems are not caused by lack of effort. They come from lack of clarity, misalignment, or too many moving parts.
-            </p>
-            <p>That's the work I focus on now.</p>
-            <p>
-              I help people, founders, and teams get clear on what matters, cut through the noise, and move forward with practical next steps.
-            </p>
-            <p className="text-foreground font-medium">
-              The goal is always the same: clarity you can act on.
+            <p className="text-foreground font-medium pt-2">
+              PMP® | Certified ScrumMaster® | Master of Information Technology
             </p>
           </div>
         </div>

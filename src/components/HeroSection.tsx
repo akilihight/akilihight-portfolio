@@ -6,10 +6,10 @@ const HeroSection = () => (
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div className="space-y-8">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.08] text-foreground">
-            I help you get clear, get aligned, and move forward.
+            Understand AI. Build Confidence. Move With Clarity.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground/70 leading-relaxed max-w-md">
-            For founders, builders, and creators who already have the substance — and need help turning it into something clear, aligned, and actionable.
+            Practical guidance for everyday people, founders, and builders navigating technology, work, and life in the AI era.
           </p>
           <div className="space-y-2.5">
             <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
@@ -22,10 +22,10 @@ const HeroSection = () => (
                 Book a Free Intro Call
               </a>
               <a
-                href="#offers"
+                href="#workshop"
                 className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-4 text-base font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
               >
-                Explore Services
+                Explore Workshops
               </a>
             </div>
             <p className="text-sm text-muted-foreground/50">
@@ -37,7 +37,7 @@ const HeroSection = () => (
           <div className="bg-secondary/60 rounded-2xl p-2 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.08)]">
             <img
               src={akiliHero}
-              alt="Akili Hight in a thoughtful pose"
+              alt="Akili Hight"
               className="rounded-xl w-full max-w-xl object-cover"
               width={720}
               height={900}

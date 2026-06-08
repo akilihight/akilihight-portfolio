@@ -1,18 +1,15 @@
 const principles = [
   {
-    title: "Clarity before commitment",
-    detail:
-      "We slow things down enough to understand what actually matters before making decisions.",
+    title: "Clarity before complexity",
+    detail: "We focus on understanding before optimization.",
   },
   {
-    title: "Structure before scale",
-    detail:
-      "We build the right foundation so progress does not create more confusion.",
+    title: "Confidence through practice",
+    detail: "Learning happens through real-world examples, not technical jargon.",
   },
   {
-    title: "Execution over theory",
-    detail:
-      "We focus on practical next steps, not just ideas.",
+    title: "Action over overwhelm",
+    detail: "We identify practical next steps that create momentum.",
   },
 ];
 
@@ -22,9 +19,17 @@ const HowIWorkSection = () => (
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-5">
         How I Work
       </h2>
-      <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-        When something feels unclear, the goal is not to force it. It is to slow things down, read the moment, and move with intention.
-      </p>
+      <div className="mb-12 space-y-4">
+        <p className="text-lg text-muted-foreground leading-relaxed">
+          When technology changes, most people do not need more information.
+        </p>
+        <p className="text-lg text-muted-foreground leading-relaxed">
+          They need clarity.
+        </p>
+        <p className="text-lg text-muted-foreground leading-relaxed">
+          I help people understand what matters, build confidence with new tools, and take practical next steps without feeling overwhelmed.
+        </p>
+      </div>
 
       <ul className="space-y-8">
         {principles.map((p) => (

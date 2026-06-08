@@ -2,20 +2,13 @@ const HowItAllComesTogetherSection = () => (
   <section className="py-28 bg-muted/30">
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-        How It All Comes Together
+        From Idea to Execution
       </h2>
       <p className="text-lg text-muted-foreground mb-12">
-        This is what it looks like when ideas move beyond thinking and turn into something real.
+        A real-world look at how vision, strategy, and consistent action become a brand.
       </p>
 
       <div className="mb-10">
-        <p className="text-sm font-medium text-primary/80 uppercase tracking-wider mb-2">
-          From idea to execution
-        </p>
-        <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
-          A quick breakdown of how an idea turned into something real, from early
-          vision to showing up at Comic-Con.
-        </p>
         <div className="w-full max-w-3xl rounded-xl overflow-hidden shadow-sm border border-border/40">
           <div className="relative" style={{ paddingBottom: "56.25%" }}>
             <iframe
@@ -30,8 +23,7 @@ const HowItAllComesTogetherSection = () => (
       </div>
 
       <p className="text-base text-muted-foreground leading-relaxed max-w-2xl">
-        This is the same approach I bring to every conversation: clarity,
-        structure, and forward movement.
+        This is the same approach I bring to every conversation: clarity, structure, creativity, and forward movement.
       </p>
     </div>
   </section>

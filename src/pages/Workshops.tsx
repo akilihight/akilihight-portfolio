@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import akiliAbout from "@/assets/akili-about.jpg";
+import akiliInstructor from "@/assets/akili-instructor.jpg.asset.json";
 
 const learnings = [
   "What AI is and how it works",
@@ -155,9 +156,9 @@ const Workshops = () => (
             <div className="flex justify-center lg:justify-start">
               <div className="bg-background rounded-2xl p-3 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.06)]">
                 <img
-                  src={akiliAbout}
+                  src={akiliInstructor.url}
                   alt="Akili Hight"
-                  className="rounded-xl w-full max-w-lg object-cover"
+                  className="rounded-xl w-full max-w-lg object-cover object-top"
                   loading="lazy"
                   width={800}
                   height={1024}

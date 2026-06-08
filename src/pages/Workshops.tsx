@@ -50,7 +50,10 @@ const Workshops = () => (
             Workshops & Learning
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground/80 leading-relaxed">
-            Practical, approachable workshops designed to help people understand AI, build confidence, and navigate technology with clarity.
+            Learn practical AI skills for work, life, and the future.
+          </p>
+          <p className="text-lg md:text-xl text-muted-foreground/80 leading-relaxed mt-4">
+            Beginner-friendly workshops designed to help people understand AI, build confidence, and use technology more effectively in everyday life.
           </p>
         </div>
       </section>

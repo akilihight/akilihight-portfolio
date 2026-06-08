@@ -30,9 +30,7 @@ const FeaturedWorkshopSection = () => (
         ))}
       </ul>
       <a
-        href="https://calendly.com/hightnetworksconsulting/30min"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/workshops"
         className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-3.5 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90"
       >
         Learn About Workshops

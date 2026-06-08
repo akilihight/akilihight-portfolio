@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import akiliAbout from "@/assets/akili-about.jpg";
 
@@ -32,6 +33,14 @@ const comingSoon = [
 
 const Workshops = () => (
   <>
+    <Helmet>
+      <title>Workshops | Everyday AI Made Simple | Akili Hight</title>
+      <meta name="description" content="Practical AI workshops to help you understand AI, build confidence, and use it safely in everyday life and work." />
+      <link rel="canonical" href="https://akilihight.com/workshops" />
+      <meta property="og:title" content="Workshops | Everyday AI Made Simple" />
+      <meta property="og:description" content="Friendly, hands-on workshops to help you understand AI and use it with confidence." />
+      <meta property="og:url" content="https://akilihight.com/workshops" />
+    </Helmet>
     <Header />
     <main>
       {/* Page header */}

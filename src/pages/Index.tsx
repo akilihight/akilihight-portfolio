@@ -28,9 +28,9 @@ const Index = () => (
       <WhatIDoSection />
       <HowIHelpSection />
       <FeaturedWorkshopSection />
-      <OffersSection />
-      <HowIWorkSection />
       <HowItAllComesTogetherSection />
+      <HowIWorkSection />
+      <OffersSection />
       <FeaturedInSection />
       <EcosystemSection />
       <AboutSection />

@@ -3,7 +3,7 @@ import akiliLogo from "@/assets/akili-logo.png";
 const Header = () => (
   <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
     <div className="container mx-auto px-6 lg:px-16 flex items-center justify-between h-18">
-      <a href="#" className="block">
+      <a href="/" className="block">
         <img
           src={akiliLogo}
           alt="Akili Hight"

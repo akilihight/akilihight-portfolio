@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Workshops from "./pages/Workshops.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ScrollToHash from "./components/ScrollToHash.tsx";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToHash />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/workshops" element={<Workshops />} />

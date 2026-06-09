@@ -11,10 +11,10 @@ const Header = () => (
         />
       </a>
       <nav className="hidden md:flex items-center gap-8">
-        <a href="#help" className="text-sm text-muted-foreground hover:text-foreground transition-colors">How I Help</a>
+        <a href="/#how-i-help" className="text-sm text-muted-foreground hover:text-foreground transition-colors">How I Help</a>
         <a href="/workshops" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Workshops</a>
-        <a href="#ecosystem" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Ecosystem</a>
-        <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</a>
+        <a href="/#ecosystem" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Ecosystem</a>
+        <a href="/#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</a>
         <a href="https://calendly.com/hightnetworksconsulting/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
           Book a Free Intro Call
         </a>

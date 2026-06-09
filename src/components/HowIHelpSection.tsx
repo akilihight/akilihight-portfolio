@@ -28,7 +28,7 @@ const items = [
 ];
 
 const HowIHelpSection = () => (
-  <section id="help" className="py-28 bg-secondary/40">
+  <section id="how-i-help" className="py-28 bg-secondary/40">
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">How I Can Help</h2>
       <p className="text-lg text-muted-foreground leading-relaxed mb-12">

@@ -1,17 +1,18 @@
 const principles = [
   {
-    title: "Clarity before complexity",
-    detail: "We focus on understanding before optimization.",
+    title: "Clarity Before Complexity",
+    detail: "We evaluate strategic objectives before jumping into technical stack selection.",
   },
   {
-    title: "Confidence through practice",
-    detail: "Learning happens through real-world examples, not technical jargon.",
+    title: "Confidence Through Practice",
+    detail: "Real-world scenarios, practical frameworks, and hands-on execution replacing jargon.",
   },
   {
-    title: "Action over overwhelm",
-    detail: "We identify practical next steps that create momentum.",
+    title: "Action Over Overwhelm",
+    detail: "Prioritizing measurable momentum and immediate operational value.",
   },
 ];
+
 
 const HowIWorkSection = () => (
   <section className="py-28">

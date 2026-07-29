@@ -5,12 +5,16 @@ const HeroSection = () => (
     <div className="container mx-auto px-6 lg:px-16 py-20">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         <div className="space-y-8">
-          <h1 className="text-5xl md:text-6xl lg:text-[4.25rem] font-semibold leading-[1.08] text-foreground">
-            Understand AI.<br />Build Confidence.<br />Move With Clarity.
+          <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-semibold leading-[1.12] text-foreground">
+            Architecting AI Readiness, Executive Strategy &amp; Future-Proof Systems.
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground/70 leading-relaxed max-w-md">
-            Practical guidance for everyday people, founders, and builders navigating technology, work, and life in the AI era.
+          <p className="text-lg md:text-xl text-muted-foreground/70 leading-relaxed max-w-xl">
+            Helping leaders, organizations, and everyday builders move from emerging technology complexity to actionable clarity and execution.
           </p>
+          <p className="inline-flex flex-wrap rounded-full border border-border bg-secondary/60 px-4 py-2 text-sm font-medium text-foreground">
+            PMP® | Certified ScrumMaster® | Master of Information Technology
+          </p>
+
           <div className="space-y-2.5">
             <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
               <a

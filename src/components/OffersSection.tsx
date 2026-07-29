@@ -9,30 +9,31 @@ const CALENDLY_LINK = "https://calendly.com/hightnetworksconsulting/30min";
 
 const offers = [
   {
-    title: "Everyday AI Coaching",
+    title: "Strategic AI Coaching & Advisory",
     description:
-      "Practical guidance for individuals, professionals, job seekers, and lifelong learners who want to use AI tools with confidence.",
-    outcome: "Greater confidence and practical AI skills.",
+      "Tailored 1-on-1 and team guidance for professionals, founders, and executives seeking to master AI tools, automate workflows, and build competitive advantage.",
+    outcome: "Clear strategy, tool mastery, and accelerated execution.",
     cta: "Learn More",
     href: "/workshops",
   },
   {
-    title: "Workshops & Speaking",
+    title: "Enterprise & Community Workshops",
     description:
-      "Interactive workshops for parks, libraries, nonprofits, schools, workforce programs, and organizations.",
-    outcome: "Better understanding of AI and emerging technology.",
+      "Interactive, high-impact learning series for corporate teams, public sector institutions, non-profits, and educational organizations.",
+    outcome: "Workforce AI literacy, risk mitigation, and practical application.",
     cta: "Explore Workshops",
     href: "/workshops",
   },
   {
-    title: "Founder & Strategy Sessions",
+    title: "Executive Strategy & Fractional Leadership",
     description:
-      "For founders, creators, and professionals navigating business, technology, positioning, and growth decisions.",
-    outcome: "Clarity, priorities, and actionable next steps.",
+      "High-level advisory for founders and leadership teams navigating digital transformation, system architecture, brand positioning, and AI adoption.",
+    outcome: "Strategic clarity, roadmap alignment, and scalable systems.",
     cta: "Book a Strategy Session",
     href: CALENDLY_LINK,
   },
 ];
+
 
 const OffersSection = () => (
   <section id="offers" className="py-28">

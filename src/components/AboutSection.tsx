@@ -25,9 +25,10 @@ const AboutSection = () => (
             <p>
               Through AkiliHight.com, he helps everyday learners, founders, builders, and professionals build clarity and confidence in the AI era.
             </p>
-            <p className="text-foreground font-medium pt-2">
+            <p className="inline-flex flex-wrap rounded-full border border-border bg-secondary/60 px-4 py-2 text-sm font-medium text-foreground mt-2">
               PMP® | Certified ScrumMaster® | Master of Information Technology
             </p>
+
           </div>
         </div>
       </div>

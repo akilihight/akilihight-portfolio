@@ -248,7 +248,7 @@ const WorkshopFlyer = () => (
                 {tools.map(({ name, cls, Icon }) => (
                   <span
                     key={name}
-                    className={`${cls} flex w-full items-center gap-1.5 rounded-full px-3 py-1 text-[8.5pt] font-semibold`}
+                    className={`${cls} flex w-full items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-1 text-[8pt] font-semibold`}
                   >
                     <Icon />
                     {name}

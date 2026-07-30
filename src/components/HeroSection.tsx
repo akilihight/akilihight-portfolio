@@ -24,7 +24,7 @@ const HeroSection = () => (
             ))}
           </ul>
           <p className="inline-flex flex-wrap rounded-full border border-border bg-secondary/60 px-4 py-2 text-sm font-medium text-foreground">
-            PMP® | Certified ScrumMaster® | Master of Information Technology
+            PMP® | CSM® | Master of Information Technology
           </p>
 
 

@@ -238,7 +238,7 @@ const WorkshopFlyer = () => (
               <img
                 src={akiliHeadshot}
                 alt="Akili Hight, technology consultant and educator"
-                className="aspect-[3/2] h-auto w-full object-cover object-top"
+                className="aspect-[3/2] h-auto w-full object-cover" style={{ objectPosition: "58% 12%" }}
               />
             </div>
             <div>

@@ -180,8 +180,18 @@ const WorkshopFlyer = () => (
           </div>
         </div>
 
+        {/* CTA band */}
+        <div className="mx-[0.6in] mt-auto rounded-xl bg-primary/10 px-5 py-4 text-center">
+          <p className="text-[10.5pt] font-semibold text-foreground">
+            Bring Everyday AI Made Simple to your team, agency, library, or community.
+          </p>
+          <p className="mt-1 text-[9pt] text-muted-foreground">
+            Book a free intro call or request the workshop SOW &amp; syllabus — akili@hightnetworks.com
+          </p>
+        </div>
+
         {/* Instructor bio */}
-        <div className="mx-[0.6in] mb-[0.6in] mt-auto rounded-xl border border-border/70 bg-secondary/50 p-5">
+        <div className="mx-[0.6in] mb-[0.6in] mt-5 rounded-xl border border-border/70 bg-secondary/50 p-5">
           <div className="flex items-center gap-5">
             <div className="w-[2.1in] shrink-0 overflow-hidden rounded-lg bg-background">
               <img

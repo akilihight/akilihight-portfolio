@@ -205,15 +205,23 @@ const Workshops = () => (
           <p className="text-lg text-muted-foreground mb-8">
             Get the full overview of Everyday AI Made Simple to share with your team, community, or organization.
           </p>
-          <a
-            href="/everyday-ai-made-simple.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-            className="inline-flex items-center justify-center rounded-lg bg-primary px-10 py-4 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Download Flyer (PDF)
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/everyday-ai-made-simple.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="inline-flex items-center justify-center rounded-lg bg-primary px-10 py-4 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              Download Flyer (PDF)
+            </a>
+            <a
+              href="/workshops/flyer"
+              className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-4 text-base font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+            >
+              View Printable Flyer
+            </a>
+          </div>
         </div>
       </section>
 

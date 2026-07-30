@@ -1,5 +1,4 @@
 const bullets = [
-  "No technical experience required",
   "Practical examples for work, home, and daily life",
   "Prompting basics and better questions",
   "Privacy, safety, scams, and responsible AI use",

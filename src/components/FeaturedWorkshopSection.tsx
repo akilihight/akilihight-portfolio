@@ -20,6 +20,9 @@ const FeaturedWorkshopSection = () => (
       <p className="text-base text-muted-foreground leading-relaxed mb-8">
         A beginner-friendly workshop that helps people understand and use tools like ChatGPT, Gemini, Claude, and Microsoft Copilot with confidence. Designed for adults, job seekers, entrepreneurs, caregivers, lifelong learners, and community groups.
       </p>
+      <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 mb-8 text-sm font-semibold text-primary">
+        ✓ No technical experience required
+      </span>
       <ul className="space-y-3 mb-10">
         {bullets.map((b) => (
           <li key={b} className="flex gap-3 text-muted-foreground leading-relaxed">

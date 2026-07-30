@@ -107,6 +107,7 @@ const WorkshopFlyer = () => (
         #flyer-sheet .flyer-chip-blue { background:#EFF6FF; color:#1E3A8A; border:1px solid #BFDBFE; }
         #flyer-sheet .flyer-chip-amber { background:#FFF7ED; color:#9A3412; border:1px solid #FED7AA; }
         #flyer-sheet .flyer-chip-cyan { background:#ECFEFF; color:#155E75; border:1px solid #A5F3FC; }
+        #flyer-sheet .flyer-note-chip { background:#F1F5F9; color:#0F172A; border:1px solid #CBD5E1; }
         #flyer-sheet .flyer-cta-btn {
           background:#FFFFFF; color:#0F172A; font-weight:600;
           box-shadow: 0 0 0 1px rgba(255,255,255,0.6), 0 6px 18px -6px rgba(255,255,255,0.45);
@@ -176,8 +177,8 @@ const WorkshopFlyer = () => (
               </p>
             </div>
           </div>
-          <p className="mt-4 border-t border-white/25 pt-3 text-[9.5pt] font-medium uppercase tracking-[0.14em] text-white/85">
-            Presented by Akili Hight, PMP® | Certified ScrumMaster®
+          <p className="mt-4 border-t border-white/25 pt-3 text-[9.5pt] font-medium uppercase tracking-[0.12em] text-white/85">
+            Presented by Akili Hight, PMP® | CSM®
           </p>
         </div>
 
@@ -189,8 +190,11 @@ const WorkshopFlyer = () => (
               <span className="flyer-eyebrow">Program Overview</span>
             </h2>
             <p className="text-[10pt] leading-relaxed text-slate-600">
-              An interactive 4-week masterclass or 1-day intensive designed to demystify artificial intelligence. Learn to use leading AI tools with confidence in work, business, and daily life. No prior technical background required.
+              An interactive 4-week masterclass or 1-day intensive designed to demystify artificial intelligence. Learn to use leading AI tools with confidence in work, business, and daily life.
             </p>
+            <span className="flyer-note-chip mt-3 inline-flex items-center gap-1.5 self-start rounded-full px-3 py-1 text-[9pt] font-semibold">
+              ✓ No prior technical background required
+            </span>
 
             <h2 className="mb-3 mt-6 text-[10pt] font-semibold uppercase tracking-[0.14em] text-primary">
               <span className="flyer-eyebrow">What You Will Master</span>
@@ -240,11 +244,11 @@ const WorkshopFlyer = () => (
               <h2 className="mb-3 text-[9.5pt] font-semibold uppercase tracking-[0.14em] text-primary">
                 <span className="flyer-eyebrow">Focus Tools</span>
               </h2>
-              <div className="flex flex-wrap gap-2">
+              <div className="grid grid-cols-2 gap-2">
                 {tools.map(({ name, cls, Icon }) => (
                   <span
                     key={name}
-                    className={`${cls} inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[8.5pt] font-semibold`}
+                    className={`${cls} flex w-full items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-1 text-[8pt] font-semibold`}
                   >
                     <Icon />
                     {name}
@@ -265,7 +269,7 @@ const WorkshopFlyer = () => (
               Bring Everyday AI Made Simple to your team, agency, library, or community.
             </p>
             <p className="mt-1 text-[9pt] text-white/75">
-              Book a free intro call or request the workshop SOW &amp; syllabus — akili@hightnetworks.com
+              Book a free intro call or request the workshop SOW &amp; syllabus — contact@akilihight.com
             </p>
           </div>
           <a
@@ -295,9 +299,9 @@ const WorkshopFlyer = () => (
               </p>
               <a
                 href="https://akilihight.com"
-                className="flyer-contact-bar mt-3 inline-flex items-center gap-2 rounded-lg px-3 py-2 text-[9.5pt] font-semibold no-underline"
+                className="flyer-contact-bar mt-3 inline-flex items-center gap-2 rounded-lg px-3 py-2 text-[9.5pt] font-bold no-underline"
               >
-                akilihight.com <span className="opacity-40">|</span> Learn More &amp; Book Workshops
+                Visit akilihight.com to view syllabus &amp; book workshops →
               </a>
             </div>
           </div>

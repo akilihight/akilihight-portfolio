@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { Printer, MessageSquareCode, Workflow, Briefcase, ShieldCheck } from "lucide-react";
 import Header from "@/components/Header";
-import ahLogo from "@/assets/ah-logo.png.asset.json";
-import akiliHeadshot from "@/assets/flyer-headshot.jpg.asset.json";
+import ahLogo from "@/assets/ah-monogram-flyer.png";
+import akiliHeadshot from "@/assets/akili-headshot-flyer.jpg";
 
 const skills = [
   {
@@ -121,7 +121,7 @@ const WorkshopFlyer = () => (
         <div className="px-[0.6in] py-6 text-white" style={{ background: "#0F172A" }}>
           <div className="flex items-center gap-4">
             <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-white p-2">
-              <img src={ahLogo.url} alt="Akili Hight monogram" className="h-full w-full object-contain" />
+              <img src={ahLogo} alt="Akili Hight monogram" className="h-full w-full object-contain" />
             </span>
             <div>
               <h1 className="text-[26pt] font-semibold leading-[1.05] tracking-tight">
@@ -236,7 +236,7 @@ const WorkshopFlyer = () => (
           <div className="flex items-center gap-5">
             <div className="w-[2.4in] shrink-0 overflow-hidden rounded-lg border border-slate-200 bg-white">
               <img
-                src={akiliHeadshot.url}
+                src={akiliHeadshot}
                 alt="Akili Hight, technology consultant and educator"
                 className="aspect-[3/2] h-auto w-full object-cover object-top"
               />

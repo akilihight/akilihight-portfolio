@@ -11,8 +11,8 @@ const CtaSection = () => (
         <a href="https://calendly.com/hightnetworksconsulting/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-lg bg-primary px-10 py-4 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90">
           Book a Free Intro Call
         </a>
-        <a href="mailto:akili@hightnetworks.com" className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-4 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">
-          Reach Out by Email
+        <a href="https://www.linkedin.com/in/akilihight" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-4 text-base font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">
+          Connect on LinkedIn
         </a>
       </div>
       <p className="text-sm text-muted-foreground/60 mt-3">

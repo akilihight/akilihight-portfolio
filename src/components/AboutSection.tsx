@@ -31,6 +31,11 @@ const AboutSection = () => (
             <p className="inline-flex flex-wrap rounded-full border border-border bg-secondary/60 px-4 py-2 text-sm font-medium text-foreground mt-2">
               PMP® | Certified ScrumMaster® | Master of Information Technology
             </p>
+            <div className="flex flex-wrap gap-5 pt-1 text-sm">
+              <a href="https://www.linkedin.com/in/akilihight" target="_blank" rel="noopener noreferrer" className="text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground">LinkedIn</a>
+              <a href="https://github.com/AkiliHight" target="_blank" rel="noopener noreferrer" className="text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground">GitHub</a>
+              <a href="https://youtube.com/@lucidfuturism" target="_blank" rel="noopener noreferrer" className="text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground">YouTube</a>
+            </div>
           </div>
         </div>
       </div>

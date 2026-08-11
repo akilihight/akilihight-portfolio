@@ -1,40 +1,32 @@
-const CALENDLY = "https://calendly.com/hightnetworksconsulting/30min";
-
 const items = [
   {
-    title: "Everyday AI",
-    desc: "Beginner-friendly guidance for learning how to use AI tools with confidence in daily life, work, communication, productivity, and decision-making.",
-    cta: "Explore Everyday AI",
-    href: "#workshop",
+    title: "AI & Technology Strategy",
+    desc: "Strategic guidance for leaders and organizations navigating AI adoption, cloud and data modernization, governance, operating models, and complex technology initiatives.",
+    cta: "Explore Advisory",
+    href: "https://hightnetworks.com",
   },
   {
-    title: "Founder Clarity",
-    desc: "Strategic guidance for founders, creators, and builders who need sharper positioning, clearer decisions, and practical next steps.",
-    cta: "Get Clarity",
-    href: CALENDLY,
+    title: "AI Learning & Career Readiness",
+    desc: "Practical guidance for professionals, job seekers, teams, and communities learning to use AI more confidently for work, communication, research, productivity, and career development.",
+    cta: "Explore Learning",
+    href: "/workshops",
   },
   {
-    title: "Career & Work Readiness",
-    desc: "Practical support for professionals, job seekers, and career changers using AI for resumes, interviews, productivity, research, and communication.",
-    cta: "Build Work Readiness",
-    href: CALENDLY,
-  },
-  {
-    title: "Workshops & Speaking",
-    desc: "Community-friendly workshops and talks for parks, libraries, nonprofits, schools, workforce programs, small business groups, and creative communities.",
+    title: "Speaking & Workshops",
+    desc: "Accessible, practical sessions on AI, emerging technology, innovation, the future of work, digital change, and building confidence with new tools.",
     cta: "View Workshops",
-    href: "#workshop",
+    href: "/workshops",
   },
 ];
 
 const HowIHelpSection = () => (
-  <section id="how-i-help" className="py-28 bg-secondary/40">
+  <section id="how-i-help" className="scroll-mt-24 py-24 bg-secondary/40">
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">How I Can Help</h2>
-      <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-        Clear, practical support — wherever you're starting from.
+      <p className="text-lg text-muted-foreground leading-relaxed mb-12 max-w-3xl">
+        Clear, practical support for organizations, professionals, and communities navigating technology and change.
       </p>
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-3 gap-8">
         {items.map((item) => {
           const external = item.href.startsWith("http");
           return (

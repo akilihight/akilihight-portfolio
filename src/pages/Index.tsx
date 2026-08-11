@@ -35,7 +35,9 @@ const Index = () => (
       <AboutSection />
       <CtaSection />
     </main>
+    <Footer />
   </>
+
 );
 
 export default Index;

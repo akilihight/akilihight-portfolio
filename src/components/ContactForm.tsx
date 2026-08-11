@@ -84,7 +84,9 @@ const ContactForm = () => {
     }
 
     setSubmitting(true);
+    const id = crypto.randomUUID();
     const { error } = await supabase.from("contact_inquiries").insert({
+      id,
       name: parsed.data.name,
       email: parsed.data.email,
       interest_type: parsed.data.interest_type,
@@ -99,6 +101,11 @@ const ContactForm = () => {
 
     lastPayload.current = payloadKey;
     setSent(true);
+
+    // Notifications are best-effort: the saved inquiry is the source of truth.
+    supabase.functions
+      .invoke("send-inquiry-emails", { body: { id } })
+      .catch(() => {});
   };
 
   if (sent) {
@@ -108,19 +115,25 @@ const ContactForm = () => {
         aria-live="polite"
         className="rounded-xl border border-border bg-background p-8 text-center"
       >
-        <p className="text-base text-foreground">
-          Thanks. Your message has been received. I'll be in touch if there's a good fit.
-        </p>
-        <button
-          type="button"
-          onClick={reset}
-          className="mt-4 text-sm font-medium text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
-        >
-          Send another message
-        </button>
+        <div className="mx-auto max-w-[480px]">
+          <p className="text-lg font-semibold text-foreground">
+            Thanks. Your message has been received.
+          </p>
+          <p className="mt-2 text-base text-muted-foreground">
+            I'll review it and follow up by email.
+          </p>
+          <button
+            type="button"
+            onClick={reset}
+            className="mt-5 text-sm font-medium text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
+          >
+            Send another message
+          </button>
+        </div>
       </div>
     );
   }
+
 
   return (
     <form onSubmit={handleSubmit} noValidate className="text-left rounded-xl border border-border bg-background p-6 sm:p-8">

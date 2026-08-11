@@ -10,6 +10,7 @@ import FeaturedInSection from "@/components/FeaturedInSection";
 import EcosystemSection from "@/components/EcosystemSection";
 import AboutSection from "@/components/AboutSection";
 import CtaSection from "@/components/CtaSection";
+import Footer from "@/components/Footer";
 
 const Index = () => (
   <>

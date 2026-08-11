@@ -9,7 +9,7 @@ const items = [
     title: "AI Learning & Career Readiness",
     desc: "Practical guidance for professionals, job seekers, teams, and communities learning to use AI more confidently for work, communication, research, productivity, and career development.",
     cta: "Explore Learning",
-    href: "/workshops",
+    href: "/learning",
   },
   {
     title: "Speaking & Workshops",

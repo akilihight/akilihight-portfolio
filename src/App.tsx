@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Workshops from "./pages/Workshops.tsx";
+import Learning from "./pages/Learning.tsx";
 import WorkshopFlyer from "./pages/WorkshopFlyer.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToHash from "./components/ScrollToHash.tsx";
@@ -21,6 +22,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/workshops" element={<Workshops />} />
+          <Route path="/learning" element={<Learning />} />
           <Route path="/workshops/flyer" element={<WorkshopFlyer />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

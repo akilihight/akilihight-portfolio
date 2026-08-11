@@ -1,7 +1,14 @@
+import { Linkedin, Github, Youtube } from "lucide-react";
 import akiliAbout from "@/assets/akili-about.jpg";
 
+const links = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/akilihight", Icon: Linkedin },
+  { label: "GitHub", href: "https://github.com/AkiliHight", Icon: Github },
+  { label: "YouTube", href: "https://youtube.com/@lucidfuturism", Icon: Youtube },
+];
+
 const AboutSection = () => (
-  <section id="about" className="scroll-mt-24 py-24">
+  <section id="about" className="scroll-mt-24 py-20">
     <div className="container mx-auto px-6 lg:px-16">
       <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         <div className="flex justify-center lg:justify-start">
@@ -20,23 +27,35 @@ const AboutSection = () => (
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground">About</h2>
           <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Akili Hight is a technology and program leader, consultant, author, and builder with more than 20 years of experience across healthcare, enterprise technology, public-sector, nonprofit, and consulting environments.
+              I'm Akili Hight, a technology and program leader, consultant, author, and builder with more than 20 years of experience across healthcare, enterprise technology, public-sector, nonprofit, and consulting environments.
             </p>
             <p>
-              His work focuses on helping people and organizations make sense of emerging technology, structure complex initiatives, and move from uncertainty to practical action.
+              My work focuses on helping people and organizations make sense of emerging technology, structure complex initiatives, and move from uncertainty to practical action.
             </p>
             <p>
-              Today, his work spans AI readiness, technology strategy, digital products, education, media, and speculative storytelling.
+              Today, that work spans AI readiness, technology strategy, digital products, education, media, and speculative storytelling.
             </p>
-            <p className="inline-flex flex-wrap rounded-full border border-border bg-secondary/60 px-4 py-2 text-sm font-medium text-foreground mt-2">
-              PMP® | Certified ScrumMaster® | Master of Information Technology
-            </p>
-            <div className="flex flex-wrap gap-5 pt-1 text-sm">
-              <a href="https://www.linkedin.com/in/akilihight" target="_blank" rel="noopener noreferrer" className="text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground">LinkedIn</a>
-              <a href="https://github.com/AkiliHight" target="_blank" rel="noopener noreferrer" className="text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground">GitHub</a>
-              <a href="https://youtube.com/@lucidfuturism" target="_blank" rel="noopener noreferrer" className="text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground">YouTube</a>
-            </div>
           </div>
+          <p className="inline-flex flex-wrap rounded-full border border-border bg-secondary/60 px-4 py-2 text-sm font-medium text-foreground">
+            PMP® | Certified ScrumMaster® | Master of Information Technology
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {links.map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-border/70 px-3.5 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+              >
+                <Icon className="h-4 w-4" aria-hidden="true" />
+                {label}
+              </a>
+            ))}
+          </div>
+          <p className="text-sm text-muted-foreground/70 leading-relaxed">
+            Available for select advisory, fractional leadership, speaking, and technology leadership opportunities.
+          </p>
         </div>
       </div>
     </div>

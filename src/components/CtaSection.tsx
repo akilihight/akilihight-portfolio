@@ -1,3 +1,5 @@
+import ContactForm from "@/components/ContactForm";
+
 const CtaSection = () => (
   <section id="cta" className="scroll-mt-24 py-20 bg-secondary/40">
     <div className="container mx-auto px-6 lg:px-16 text-center max-w-3xl">
@@ -18,6 +20,18 @@ const CtaSection = () => (
       <p className="text-sm text-muted-foreground/60 mt-3">
         Free 30-minute conversation — no pressure.
       </p>
+
+      <div className="mt-12">
+        <div className="flex items-center gap-4 mb-8" aria-hidden="true">
+          <span className="h-px flex-1 bg-border" />
+          <span className="text-xs uppercase tracking-widest text-muted-foreground/70">Or send a message</span>
+          <span className="h-px flex-1 bg-border" />
+        </div>
+        <p className="text-sm text-muted-foreground mb-6">
+          Not ready to book? Share a few details and I'll follow up by email.
+        </p>
+        <ContactForm />
+      </div>
     </div>
   </section>
 );

@@ -1,11 +1,11 @@
 const CtaSection = () => (
-  <section id="cta" className="py-24 bg-secondary/40">
+  <section id="cta" className="scroll-mt-24 py-20 bg-secondary/40">
     <div className="container mx-auto px-6 lg:px-16 text-center max-w-3xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
         Start a Conversation
       </h2>
       <p className="text-lg text-muted-foreground mb-8">
-        Working through an AI, technology, career, workshop, or strategy question? Tell me what you're trying to accomplish.
+        Have an AI, technology, workshop, career, partnership, or strategy question? Tell me what you're trying to accomplish.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="https://calendly.com/hightnetworksconsulting/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-lg bg-primary px-10 py-4 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90">

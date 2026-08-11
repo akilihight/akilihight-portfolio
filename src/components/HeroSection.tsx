@@ -14,8 +14,8 @@ const HeroSection = () => (
           <ul className="space-y-3 max-w-xl">
             {[
               ["AI & Technology Strategy", "Helping leaders make informed decisions about AI, modernization, governance, and execution."],
-              ["Learning & Workforce Readiness", "Building practical confidence with AI tools and emerging technology."],
               ["Ideas Into Execution", "Turning concepts, strategies, and opportunities into structured action."],
+              ["Learning & Workforce Readiness", "Building practical confidence with AI tools and emerging technology."],
             ].map(([title, desc]) => (
               <li key={title} className="text-base leading-relaxed">
                 <span className="font-semibold text-foreground">{title}</span>

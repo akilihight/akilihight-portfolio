@@ -7,7 +7,7 @@ const pathways = [
   {
     icon: Sparkles,
     title: "Everyday AI",
-    desc: "Learn practical ways to use tools such as ChatGPT, Gemini, Claude, and Microsoft Copilot for communication, research, productivity, decision-making, and everyday tasks.",
+    desc: "Practical ways to use tools such as ChatGPT, Gemini, Claude, and Microsoft Copilot for communication, research, productivity, decision-making, and everyday tasks.",
     topics: [
       "Prompting fundamentals",
       "Research and communication",
@@ -22,19 +22,24 @@ const pathways = [
     title: "Career & Work Readiness",
     desc: "Use AI thoughtfully to strengthen career preparation, professional communication, research, productivity, interview readiness, and your ability to navigate a changing workplace.",
     topics: [
-      "Resume and career narrative development",
+      "Career narrative and resume development",
       "Job and company research",
       "Interview preparation",
       "Professional communication",
       "AI-assisted productivity",
-      "Understanding the changing workplace",
     ],
+    cta: "Explore Career Readiness",
+    href: "#career-readiness",
   },
   {
     icon: Users,
     title: "Teams & Workforce Learning",
     desc: "Help teams build practical AI literacy, responsible-use habits, and confidence applying emerging tools in real-world work environments.",
-    topics: [],
+    topics: [
+      "Practical AI literacy",
+      "Responsible-use habits",
+      "Real-world workflow application",
+    ],
     cta: "Explore Workshops",
     href: "/workshops",
   },
@@ -102,17 +107,19 @@ const Learning = () => (
               <div key={title} className="rounded-2xl border border-border/70 bg-card p-7 flex flex-col">
                 <Icon className="h-6 w-6 text-primary mb-4" aria-hidden="true" />
                 <h3 className="text-lg font-semibold text-foreground mb-3">{title}</h3>
-                <p className="text-muted-foreground leading-relaxed text-[15px]">{desc}</p>
-                {topics.length > 0 && (
-                  <ul className="mt-5 space-y-2.5 flex-1">
-                    {topics.map((t) => (
-                      <li key={t} className="flex gap-3 text-[15px] text-muted-foreground leading-relaxed">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
-                        <span>{t}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <div className="flex-1">
+                  <p className="text-muted-foreground leading-relaxed text-[15px]">{desc}</p>
+                  {topics.length > 0 && (
+                    <ul className="mt-5 space-y-2.5">
+                      {topics.map((t) => (
+                        <li key={t} className="flex gap-3 text-[15px] text-muted-foreground leading-relaxed">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                          <span>{t}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
                 {cta && href && (
                   <a
                     href={href}
@@ -127,17 +134,44 @@ const Learning = () => (
         </div>
       </section>
 
-      {/* CareerProof */}
-      <section className="pb-20">
+      {/* Career Readiness */}
+      <section id="career-readiness" className="scroll-mt-24 pb-20">
         <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
-          <div className="rounded-2xl border border-border/70 bg-secondary/30 p-7">
-            <span className="inline-block text-xs uppercase tracking-wider text-muted-foreground/70 border border-border rounded-full px-2.5 py-0.5 mb-3">
-              In Development
-            </span>
-            <h2 className="text-xl font-semibold text-foreground mb-2">CareerProof™</h2>
-            <p className="text-muted-foreground leading-relaxed max-w-2xl">
-              A career intelligence platform exploring a more durable way to represent professional experience, execution scale, and role alignment in the age of AI.
+          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">Career & Work Readiness</h2>
+          <p className="text-lg text-muted-foreground mb-10 max-w-3xl">
+            AI is changing how people search for work, communicate their experience, prepare for interviews, and build new skills. I help professionals use these tools thoughtfully while developing a clearer picture of the experience and capabilities they already bring.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="rounded-2xl border border-border/70 bg-card p-7">
+              <h3 className="text-lg font-semibold text-foreground mb-3">Career Readiness Support</h3>
+              <p className="text-muted-foreground leading-relaxed text-[15px]">
+                Practical guidance for job research, career narratives, interview preparation, professional communication, productivity, and responsible use of AI during the job search and career development process.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border/70 bg-secondary/30 p-7">
+              <span className="inline-block text-xs uppercase tracking-wider text-muted-foreground/70 border border-border rounded-full px-2.5 py-0.5 mb-3">
+                In Development
+              </span>
+              <h3 className="text-lg font-semibold text-foreground mb-3">CareerProof™</h3>
+              <p className="text-muted-foreground leading-relaxed text-[15px]">
+                A career intelligence platform exploring a more durable way to represent professional experience, execution scale, and role alignment in the age of AI.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <h3 className="text-2xl md:text-3xl font-semibold text-foreground mb-3">
+              Working Through a Career or AI Question?
+            </h3>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Tell me what you're trying to accomplish and we can identify a practical starting point.
             </p>
+            <a
+              href="/#cta"
+              className="inline-flex items-center justify-center rounded-lg bg-primary px-10 py-4 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              Start a Conversation
+            </a>
           </div>
         </div>
       </section>

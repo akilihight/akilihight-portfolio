@@ -1,15 +1,15 @@
 const principles = [
   {
     title: "Clarity Before Complexity",
-    detail: "Understand the objective before choosing the technology.",
+    detail: "Define the objective before choosing the technology.",
   },
   {
     title: "Confidence Through Practice",
-    detail: "Use real situations, practical frameworks, and hands-on learning.",
+    detail: "Learn through real situations and hands-on application.",
   },
   {
     title: "Action Over Overwhelm",
-    detail: "Turn complexity into achievable next steps and measurable progress.",
+    detail: "Turn complexity into clear next steps.",
   },
 ];
 

@@ -1,22 +1,22 @@
 const proofPoints = [
-  { label: "20+ Years", detail: "Technology and program leadership" },
-  { label: "Enterprise Experience", detail: "Healthcare, public sector, nonprofit, and consulting environments" },
-  { label: "PMP® + CSM®", detail: "Certified project and Agile leadership" },
-  { label: "AI + Technology", detail: "Cloud, data, digital transformation, AI readiness, and emerging technology" },
+  { label: "20+ Years", detail: "Technology leadership" },
+  { label: "PMP® + CSM®", detail: "Project + Agile leadership" },
+  { label: "Enterprise", detail: "Healthcare + public sector" },
+  { label: "AI + Technology", detail: "Cloud, data + transformation" },
 ];
 
 const selectedWork = [
   {
     title: "Enterprise Transformation",
-    detail: "Led complex cloud, data, infrastructure, and digital programs across healthcare, enterprise, and public-sector environments.",
+    detail: "Led cloud, data, infrastructure, and digital initiatives across healthcare and public-sector environments.",
   },
   {
     title: "AI Product Development",
-    detail: "Built AI-enabled products and decision tools including CloudBait Navigator, Project Navigator, and CareerProof.",
+    detail: "Built AI-enabled platforms including CloudBait Navigator, Project Navigator, CareerProof, and clinical workflow tools.",
   },
   {
-    title: "Brand & Platform Building",
-    detail: "Developed digital products, media properties, and creative platforms from initial concept through real-world execution.",
+    title: "Brands & Digital Platforms",
+    detail: "Built technology, media, and creative ventures from concept through launch.",
   },
 ];
 
@@ -26,7 +26,7 @@ const CredibilitySection = () => (
       <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-8">
         Experience Behind the Work
       </h2>
-      <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <dl className="grid grid-cols-2 gap-x-6 gap-y-7 sm:gap-8 lg:grid-cols-4">
         {proofPoints.map((p) => (
           <div key={p.label}>
             <dt className="text-base font-semibold text-foreground">{p.label}</dt>
@@ -35,7 +35,7 @@ const CredibilitySection = () => (
         ))}
       </dl>
       <p className="mt-8 text-sm text-muted-foreground/80 leading-relaxed max-w-3xl">
-        Experience includes work with organizations such as Kaiser Permanente, Blue Shield of California, CommonSpirit Health, Rady Children's / CHOC, State Bar of California, Movember, and Health Net.
+        Selected organizations: Kaiser Permanente, Blue Shield of California, CommonSpirit Health, CHOC, State Bar of California, Movember, Health Net.
       </p>
 
       <div className="mt-12 pt-8 border-t border-border/40">

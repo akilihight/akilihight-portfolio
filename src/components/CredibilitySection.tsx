@@ -1,22 +1,22 @@
 const proofPoints = [
-  { label: "20+ Years", detail: "Technology and program leadership" },
-  { label: "Enterprise Experience", detail: "Healthcare, public sector, nonprofit, and consulting environments" },
-  { label: "PMP® + CSM®", detail: "Certified project and Agile leadership" },
-  { label: "AI + Technology", detail: "Cloud, data, digital transformation, AI readiness, and emerging technology" },
+  { label: "20+ Years", detail: "Technology leadership" },
+  { label: "PMP® + CSM®", detail: "Project + Agile leadership" },
+  { label: "Enterprise", detail: "Healthcare + public sector" },
+  { label: "AI + Technology", detail: "Cloud, data + transformation" },
 ];
 
 const selectedWork = [
   {
     title: "Enterprise Transformation",
-    detail: "Led complex cloud, data, infrastructure, and digital programs across healthcare, enterprise, and public-sector environments.",
+    detail: "Led cloud, data, infrastructure, and digital initiatives across healthcare and public-sector environments.",
   },
   {
     title: "AI Product Development",
-    detail: "Built AI-enabled products and decision tools including CloudBait Navigator, Project Navigator, and CareerProof.",
+    detail: "Built AI-enabled platforms including CloudBait Navigator, Project Navigator, CareerProof, and clinical workflow tools.",
   },
   {
-    title: "Brand & Platform Building",
-    detail: "Developed digital products, media properties, and creative platforms from initial concept through real-world execution.",
+    title: "Brands & Digital Platforms",
+    detail: "Built technology, media, and creative ventures from concept through launch.",
   },
 ];
 

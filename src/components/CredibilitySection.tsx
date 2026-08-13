@@ -26,7 +26,7 @@ const CredibilitySection = () => (
       <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-8">
         Experience Behind the Work
       </h2>
-      <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <dl className="grid grid-cols-2 gap-x-6 gap-y-7 sm:gap-8 lg:grid-cols-4">
         {proofPoints.map((p) => (
           <div key={p.label}>
             <dt className="text-base font-semibold text-foreground">{p.label}</dt>
@@ -35,7 +35,7 @@ const CredibilitySection = () => (
         ))}
       </dl>
       <p className="mt-8 text-sm text-muted-foreground/80 leading-relaxed max-w-3xl">
-        Experience includes work with organizations such as Kaiser Permanente, Blue Shield of California, CommonSpirit Health, Rady Children's / CHOC, State Bar of California, Movember, and Health Net.
+        Selected organizations: Kaiser Permanente, Blue Shield of California, CommonSpirit Health, CHOC, State Bar of California, Movember, Health Net.
       </p>
 
       <div className="mt-12 pt-8 border-t border-border/40">

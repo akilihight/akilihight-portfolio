@@ -17,6 +17,8 @@ const ventures = [
     name: "Project Navigator",
     category: "Project Intelligence",
     desc: "Project intelligence workspace that helps leaders turn complex initiatives into structured plans, decisions, and executive narratives.",
+    cta: "Explore Project Navigator",
+    url: "https://projectnavigator.ai",
   },
   {
     name: "CareerProof",

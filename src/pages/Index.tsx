@@ -25,12 +25,12 @@ const Index = () => (
     <Header />
     <main>
       <HeroSection />
-      <CredibilitySection />
       <HowIHelpSection />
-      <FeaturedWorkshopSection />
-      <HowItAllComesTogetherSection />
-      <HowIWorkSection />
+      <CredibilitySection />
       <EcosystemSection />
+      <FeaturedWorkshopSection />
+      <HowIWorkSection />
+      <HowItAllComesTogetherSection />
       <FeaturedInSection />
       <AboutSection />
       <CtaSection />

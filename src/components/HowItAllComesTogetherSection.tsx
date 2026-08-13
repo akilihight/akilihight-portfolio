@@ -2,10 +2,10 @@ const HowItAllComesTogetherSection = () => (
   <section className="py-20 bg-muted/30">
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">
-        Building Ideas Into Reality
+        Ideas Into Reality
       </h2>
       <p className="text-lg text-muted-foreground mb-10 max-w-3xl">
-        A real example of how an idea can move from concept to brand, platform, audience, and real-world opportunity.
+        From concept to brand, audience, and real-world opportunity.
       </p>
 
       <div className="mb-8">
@@ -23,7 +23,7 @@ const HowItAllComesTogetherSection = () => (
       </div>
 
       <p className="text-base text-muted-foreground leading-relaxed max-w-2xl">
-        This is the same approach I bring to technology and business challenges: clarity, structure, creativity, and consistent execution.
+        The same approach I bring to technology and business: clarity, structure, creativity, and execution.
       </p>
     </div>
   </section>

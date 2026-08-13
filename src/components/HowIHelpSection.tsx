@@ -1,19 +1,19 @@
 const items = [
   {
     title: "AI & Technology Strategy",
-    desc: "Strategic guidance for leaders and organizations navigating AI adoption, cloud and data modernization, governance, operating models, and complex technology initiatives.",
+    desc: "For organizations and leaders making decisions about AI, data, cloud, governance, and transformation.",
     cta: "Explore Advisory",
     href: "https://hightnetworks.com",
   },
   {
     title: "AI Learning & Career Readiness",
-    desc: "Practical guidance for professionals, job seekers, teams, and communities learning to use AI more confidently for work, communication, research, productivity, and career development.",
+    desc: "For individuals and professionals building practical AI skills, navigating work, or preparing for what comes next.",
     cta: "Explore Learning",
     href: "/learning",
   },
   {
-    title: "Speaking & Workshops",
-    desc: "Accessible, practical sessions on AI, emerging technology, innovation, the future of work, digital change, and building confidence with new tools.",
+    title: "Speaking & Workforce Learning",
+    desc: "For teams, companies, schools, nonprofits, and community organizations that need practical AI education.",
     cta: "View Workshops",
     href: "/workshops",
   },
@@ -24,7 +24,7 @@ const HowIHelpSection = () => (
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">How I Can Help</h2>
       <p className="text-lg text-muted-foreground leading-relaxed mb-12 max-w-3xl">
-        Clear, practical support for organizations, professionals, and communities navigating technology and change.
+        Practical support for individuals, professionals, teams, and organizations.
       </p>
       <div className="grid md:grid-cols-3 gap-8">
         {items.map((item) => {

@@ -44,7 +44,7 @@ const EcosystemSection = () => (
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">The Innovation Ecosystem</h2>
       <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-3xl">
-        A connected portfolio of advisory, technology products, media, and creative ventures built and led by Akili Hight.
+        A portfolio of businesses, products, media, and creative ventures I've built around technology, decision-making, learning, and imagination.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

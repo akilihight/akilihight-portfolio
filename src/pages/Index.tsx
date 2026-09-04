@@ -10,6 +10,7 @@ import FeaturedInSection from "@/components/FeaturedInSection";
 import EcosystemSection from "@/components/EcosystemSection";
 import AboutSection from "@/components/AboutSection";
 import CtaSection from "@/components/CtaSection";
+import NewsletterSection from "@/components/NewsletterSection";
 import Footer from "@/components/Footer";
 
 const Index = () => (
@@ -34,6 +35,7 @@ const Index = () => (
       <FeaturedInSection />
       <AboutSection />
       <CtaSection />
+      <NewsletterSection />
     </main>
     <Footer />
   </>

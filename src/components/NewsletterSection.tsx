@@ -83,8 +83,10 @@ const NewsletterSection = () => {
             You're on the list.
           </h2>
           <p className="text-muted-foreground">
-            Check your inbox soon for the first issue.
+            Thanks for subscribing. Watch your inbox for a confirmation email,
+            then your first issue of The Everyday AI Digest.
           </p>
+
         </div>
       </section>
     );

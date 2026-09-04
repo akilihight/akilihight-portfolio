@@ -4,7 +4,7 @@ const items = [
     audience: "For Organizations & Leaders",
     desc: "For organizations and leaders making decisions about AI, data, cloud, governance, and transformation.",
     cta: "Explore Advisory",
-    href: "https://hightnetworks.com",
+    href: "#cta",
   },
   {
     title: "AI Learning & Career Readiness",

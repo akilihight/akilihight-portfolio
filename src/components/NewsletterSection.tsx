@@ -33,12 +33,14 @@ const NewsletterSection = () => {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState<FieldErrors>({});
+  const [formError, setFormError] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (submitting) return;
+    setFormError("");
 
     const parsed = schema.safeParse({ firstName, email });
     if (!parsed.success) {
@@ -53,12 +55,22 @@ const NewsletterSection = () => {
     setErrors({});
 
     setSubmitting(true);
-    // Placeholder for future backend integration. The UI state updates
-    // immediately so the section feels responsive.
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    setSubmitting(false);
-    setSubscribed(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("newsletter-subscribe", {
+        body: { firstName: parsed.data.firstName, email: parsed.data.email },
+      });
+      if (error || !data?.success) {
+        setFormError("We couldn't sign you up just now. Please try again in a moment.");
+        return;
+      }
+      setSubscribed(true);
+    } catch {
+      setFormError("We couldn't sign you up just now. Please try again in a moment.");
+    } finally {
+      setSubmitting(false);
+    }
   };
+
 
   if (subscribed) {
     return (

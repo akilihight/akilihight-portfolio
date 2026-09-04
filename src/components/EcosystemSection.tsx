@@ -30,7 +30,7 @@ const ventures = [
     category: "Media & Ideas",
     desc: "Writing and ideas about AI, work, change, resilience, and navigating a rapidly evolving world.",
     cta: "Read Gritletter",
-    url: "https://gritletter.co",
+    url: "https://gritletter.substack.com/",
   },
   {
     name: "LUCID Futurism",

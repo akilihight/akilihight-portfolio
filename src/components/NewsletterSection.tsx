@@ -173,17 +173,31 @@ const NewsletterSection = () => {
             </div>
           </div>
 
+          {formError && (
+            <p role="alert" className="mt-5 text-sm text-destructive">
+              {formError}
+            </p>
+          )}
+
           <Button
             type="submit"
             disabled={submitting}
             className="mt-6 w-full sm:w-auto"
           >
-            {submitting ? "Subscribing…" : "Get the Free Digest"}
+            {submitting ? (
+              <>
+                <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+                Submitting…
+              </>
+            ) : (
+              "Get the Free Digest"
+            )}
           </Button>
 
           <p className="mt-4 text-xs text-muted-foreground/70">
             No spam. Unsubscribe anytime. Your email stays private.
           </p>
+
         </form>
       </div>
     </section>

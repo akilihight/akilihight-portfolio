@@ -35,6 +35,7 @@ const Index = () => (
       <FeaturedInSection />
       <AboutSection />
       <CtaSection />
+      <NewsletterSection />
     </main>
     <Footer />
   </>

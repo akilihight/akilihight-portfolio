@@ -7,7 +7,6 @@ import FeaturedWorkshopSection from "@/components/FeaturedWorkshopSection";
 import HowItAllComesTogetherSection from "@/components/HowItAllComesTogetherSection";
 import HowIWorkSection from "@/components/HowIWorkSection";
 import FeaturedInSection from "@/components/FeaturedInSection";
-import EcosystemSection from "@/components/EcosystemSection";
 import AboutSection from "@/components/AboutSection";
 import CtaSection from "@/components/CtaSection";
 import NewsletterSection from "@/components/NewsletterSection";
@@ -28,7 +27,6 @@ const Index = () => (
       <HeroSection />
       <HowIHelpSection />
       <CredibilitySection />
-      <EcosystemSection />
       <FeaturedWorkshopSection />
       <HowIWorkSection />
       <HowItAllComesTogetherSection />

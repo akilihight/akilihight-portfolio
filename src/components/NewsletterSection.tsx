@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { z } from "zod";
-import { CalendarDays, Clock, Sparkles } from "lucide-react";
+import { CalendarDays, Clock, Loader2, Sparkles } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+
 
 const schema = z.object({
   firstName: z

@@ -1,6 +1,6 @@
 const navLinks = [
   { label: "How I Can Help", href: "/#how-i-help" },
-  { label: "Ecosystem", href: "/#ecosystem" },
+  { label: "Ecosystem", href: "/ecosystem" },
   { label: "About", href: "/#about" },
   { label: "Contact", href: "/#cta" },
 ];

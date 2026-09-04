@@ -1,18 +1,21 @@
 const items = [
   {
     title: "AI & Technology Strategy",
+    audience: "For Organizations & Leaders",
     desc: "For organizations and leaders making decisions about AI, data, cloud, governance, and transformation.",
     cta: "Explore Advisory",
     href: "https://hightnetworks.com",
   },
   {
     title: "AI Learning & Career Readiness",
+    audience: "For Individual Professionals",
     desc: "For individuals and professionals building practical AI skills, navigating work, or preparing for what comes next.",
     cta: "Explore Learning",
     href: "/learning",
   },
   {
     title: "Speaking & Workforce Learning",
+    audience: "For Community Groups & Nonprofits",
     desc: "For teams, companies, schools, nonprofits, and community organizations that need practical AI education.",
     cta: "View Workshops",
     href: "/workshops",
@@ -34,6 +37,7 @@ const HowIHelpSection = () => (
               key={item.title}
               className="bg-card rounded-xl p-8 border border-border/70 transition-shadow hover:shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] flex flex-col h-full"
             >
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-primary/80 mb-2">{item.audience}</p>
               <h3 className="text-xl font-semibold text-foreground mb-3">{item.title}</h3>
               <p className="text-muted-foreground leading-relaxed text-[15px] flex-1">{item.desc}</p>
               <a

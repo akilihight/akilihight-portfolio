@@ -4,7 +4,7 @@ import ahLogo from "@/assets/ah-logo.png.asset.json";
 
 const navItems = [
   { label: "How I Can Help", href: "/#how-i-help" },
-  { label: "Ecosystem", href: "/#ecosystem" },
+  { label: "Ecosystem", href: "/ecosystem" },
   { label: "About", href: "/#about" },
   { label: "Contact", href: "/#cta" },
 ];
@@ -27,7 +27,7 @@ const Header = () => {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-normal text-muted-foreground/70 hover:text-foreground transition-colors"
             >
               {item.label}
             </a>
@@ -36,7 +36,7 @@ const Header = () => {
             href="https://calendly.com/hightnetworksconsulting/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-semibold shadow-sm text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Book a Free Intro Call
           </a>
@@ -60,7 +60,7 @@ const Header = () => {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="py-2.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="py-2.5 text-sm font-normal text-muted-foreground/70 hover:text-foreground transition-colors"
               >
                 {item.label}
               </a>

@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { z } from "zod";
-import { CalendarDays, Clock, Sparkles } from "lucide-react";
+import { CalendarDays, Clock, Loader2, Sparkles } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+
 
 const schema = z.object({
   firstName: z
@@ -31,12 +33,14 @@ const NewsletterSection = () => {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState<FieldErrors>({});
+  const [formError, setFormError] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (submitting) return;
+    setFormError("");
 
     const parsed = schema.safeParse({ firstName, email });
     if (!parsed.success) {
@@ -51,12 +55,22 @@ const NewsletterSection = () => {
     setErrors({});
 
     setSubmitting(true);
-    // Placeholder for future backend integration. The UI state updates
-    // immediately so the section feels responsive.
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    setSubmitting(false);
-    setSubscribed(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("newsletter-subscribe", {
+        body: { firstName: parsed.data.firstName, email: parsed.data.email },
+      });
+      if (error || !data?.success) {
+        setFormError("We couldn't sign you up just now. Please try again in a moment.");
+        return;
+      }
+      setSubscribed(true);
+    } catch {
+      setFormError("We couldn't sign you up just now. Please try again in a moment.");
+    } finally {
+      setSubmitting(false);
+    }
   };
+
 
   if (subscribed) {
     return (
@@ -69,8 +83,10 @@ const NewsletterSection = () => {
             You're on the list.
           </h2>
           <p className="text-muted-foreground">
-            Check your inbox soon for the first issue.
+            Thanks for subscribing. Watch your inbox for a confirmation email,
+            then your first issue of The Everyday AI Digest.
           </p>
+
         </div>
       </section>
     );
@@ -159,17 +175,31 @@ const NewsletterSection = () => {
             </div>
           </div>
 
+          {formError && (
+            <p role="alert" className="mt-5 text-sm text-destructive">
+              {formError}
+            </p>
+          )}
+
           <Button
             type="submit"
             disabled={submitting}
             className="mt-6 w-full sm:w-auto"
           >
-            {submitting ? "Subscribing…" : "Get the Free Digest"}
+            {submitting ? (
+              <>
+                <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+                Submitting…
+              </>
+            ) : (
+              "Get the Free Digest"
+            )}
           </Button>
 
           <p className="mt-4 text-xs text-muted-foreground/70">
             No spam. Unsubscribe anytime. Your email stays private.
           </p>
+
         </form>
       </div>
     </section>

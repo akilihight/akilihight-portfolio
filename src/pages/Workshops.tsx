@@ -5,7 +5,7 @@ import akiliInstructor from "@/assets/akili-instructor.jpg.asset.json";
 
 const CALENDLY = "https://calendly.com/hightnetworksconsulting/30min";
 const SOW_MAILTO =
-  "mailto:akili@hightnetworks.com?subject=Workshop%20SOW%20%26%20Syllabus%20Request&body=Organization%3A%0AEstimated%20audience%20size%3A%0APreferred%20format%20(keynote%2C%204-week%20cohort%2C%20enterprise%20immersion)%3A%0ATarget%20timeframe%3A";
+  "mailto:info@akilihight.com?subject=Workshop%20SOW%20%26%20Syllabus%20Request&body=Organization%3A%0AEstimated%20audience%20size%3A%0APreferred%20format%20(keynote%2C%204-week%20cohort%2C%20enterprise%20immersion)%3A%0ATarget%20timeframe%3A";
 
 const audiences = [
   {

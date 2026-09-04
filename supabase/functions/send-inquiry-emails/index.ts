@@ -3,7 +3,7 @@ import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 
 const GATEWAY_URL = 'https://connector-gateway.lovable.dev/resend';
 const FROM = 'Akili Hight <notifications@send.cloudbait.io>';
-const ADMIN_RECIPIENT = 'info@hightnetworks.com';
+const ADMIN_RECIPIENT = 'info@akilihight.com';
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 

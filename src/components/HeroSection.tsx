@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import akiliHero from "@/assets/akili-hero.jpg";
 
 const HeroSection = () => (
@@ -34,12 +35,12 @@ const HeroSection = () => (
             >
               Work With Me
             </a>
-            <a
-              href="#ecosystem"
+            <Link
+              to="/ecosystem"
               className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-4 text-base font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
             >
               See What I've Built
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex justify-center lg:justify-end">

@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import CredibilitySection from "@/components/CredibilitySection";
+import ProgramLeadershipSection from "@/components/ProgramLeadershipSection";
 import HowIHelpSection from "@/components/HowIHelpSection";
 import FeaturedWorkshopSection from "@/components/FeaturedWorkshopSection";
 import HowItAllComesTogetherSection from "@/components/HowItAllComesTogetherSection";
@@ -16,10 +17,10 @@ const Index = () => (
   <>
     <Helmet>
       <title>Akili Hight | AI Strategy, Technology Leadership & Innovation</title>
-      <meta name="description" content="Akili Hight helps leaders, professionals, and communities navigate AI, technology, digital transformation, and complex change with clarity and practical action." />
+      <meta name="description" content="Akili Hight brings AI strategy, technology leadership, program leadership, and enterprise transformation experience to complex work." />
       <link rel="canonical" href="https://akilihight.com/" />
       <meta property="og:title" content="Akili Hight | AI Strategy, Technology Leadership & Innovation" />
-      <meta property="og:description" content="Akili Hight helps leaders, professionals, and communities navigate AI, technology, digital transformation, and complex change with clarity and practical action." />
+      <meta property="og:description" content="AI strategy, technology leadership, program leadership, and enterprise transformation experience for complex work." />
       <meta property="og:url" content="https://akilihight.com/" />
     </Helmet>
     <Header />
@@ -27,6 +28,7 @@ const Index = () => (
       <HeroSection />
       <HowIHelpSection />
       <CredibilitySection />
+      <ProgramLeadershipSection />
       <FeaturedWorkshopSection />
       <HowIWorkSection />
       <HowItAllComesTogetherSection />

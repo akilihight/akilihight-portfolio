@@ -8,18 +8,30 @@ const HowItAllComesTogetherSection = () => (
         From concept to brand, audience, and real-world opportunity.
       </p>
 
-      <div className="mb-8">
-        <div className="w-full max-w-2xl rounded-xl overflow-hidden shadow-sm border border-border/40">
-          <div className="relative" style={{ paddingBottom: "56.25%" }}>
+      <div className="mb-8 max-w-2xl">
+        <div className="aspect-video w-full overflow-hidden rounded-xl border border-border/40 bg-card shadow-sm">
             <iframe
-              src="https://www.youtube.com/embed/j2Qxh_78x4s"
-              title="From idea to execution — Akili Hight"
+              src="https://www.youtube-nocookie.com/embed/j2Qxh_78x4s"
+              title="How Akili Hight built the Lucid Futurism brand"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="absolute inset-0 w-full h-full"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              className="h-full w-full"
             />
-          </div>
         </div>
+        <p className="mt-3 text-sm text-muted-foreground">
+          If the video does not load, {" "}
+          <a
+            href="https://www.youtube.com/watch?v=j2Qxh_78x4s"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-primary underline-offset-4 hover:underline focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            aria-label="Watch How Akili Hight built the Lucid Futurism brand on YouTube in a new tab"
+          >
+            watch it on YouTube
+          </a>.
+        </p>
       </div>
 
       <p className="text-base text-muted-foreground leading-relaxed max-w-2xl">

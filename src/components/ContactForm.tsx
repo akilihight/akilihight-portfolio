@@ -19,6 +19,7 @@ const INTERESTS = [
   "Career / Work Readiness",
   "Partnership / Collaboration",
   "Professional Opportunity",
+  "Public-Sector or Teaming Inquiry",
   "Other",
 ] as const;
 

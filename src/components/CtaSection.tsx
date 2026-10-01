@@ -6,8 +6,19 @@ const CtaSection = () => (
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
         Start a Conversation
       </h2>
-      <p className="text-lg text-muted-foreground mb-8">
+      <p className="text-lg text-muted-foreground mb-3">
         Have an AI, technology, workshop, career, partnership, or strategy question? Tell me what you're trying to accomplish.
+      </p>
+      <p className="mb-8 text-sm leading-relaxed text-muted-foreground">
+        For organizational consulting, procurement, and prime-contractor teaming inquiries, {" "}
+        <a
+          href="https://hightnetworks.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-primary underline-offset-4 hover:underline focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        >
+          visit Hight Networks
+        </a>.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="https://calendly.com/hightnetworksconsulting/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-lg bg-primary px-10 py-4 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90">

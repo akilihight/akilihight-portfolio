@@ -16,3 +16,4 @@
 - [ ] Update metadata, structured data, sitemap, llms.txt, and supported analytics events.
 - [ ] Verify preserved routes, anchors, signup, accessibility, performance, and mobile layouts.
 - [ ] Report changes and owner-supplied materials required before commerce activation.
+- [ ] Apply approved Phase 1 refinements: exact homepage order, one public product, available-resource-first presentation, hidden future products, full activation gate, and restrained CTA hierarchy.

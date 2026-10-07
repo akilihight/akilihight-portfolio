@@ -1,0 +1,13 @@
+export const PUBLIC_PAGES = [
+  { path: "/", title: "Akili Hight | Practical AI, Learning & Technology Leadership", description: "Practical AI guidance, learning resources, and tools for people and organizations. Explore the Everyday AI Digest, workshops, and technology advisory." },
+  { path: "/learning", title: "AI Learning & Career Readiness | Akili Hight", description: "Build practical AI skills for everyday life, work, and career readiness with learning pathways for people, professionals, and teams." },
+  { path: "/workshops", title: "Practical AI Workshops | Akili Hight", description: "Explore Everyday AI Made Simple for beginners and community groups, plus organizational AI learning and readiness offerings with Akili Hight." },
+  { path: "/ecosystem", title: "Innovation Ecosystem | Akili Hight", description: "Explore Akili Hight's technology, advisory, digital-product, and creative ventures, including Hight Networks, CloudBait, and Project Navigator." },
+  { path: "/shop", title: "Practical AI Tools | Akili Hight", description: "Explore the AI Confidence Starter Kit, a planned beginner-friendly resource for useful, thoughtful AI at home and at work. Join the digest for updates." },
+  { path: "/products/ai-starter-kit", title: "AI Confidence Starter Kit | Akili Hight", description: "Discover the planned AI Confidence Starter Kit: plain-English AI basics, prompting, privacy, verification, and everyday workflows. Get notified about availability." },
+  { path: "/newsletter", title: "The Everyday AI Digest | Akili Hight", description: "One practical AI idea each week, explained in plain English. Subscribe to The Everyday AI Digest or browse its publication archive on Kit." },
+  { path: "/resources", title: "Practical AI Resources | Akili Hight", description: "Find AI learning pathways, workshop information, and newsletter resources organized around getting started, work, careers, small business, and responsible AI." },
+  { path: "/ai-profile", title: "Akili Hight | Professional & AI Reference Profile", description: "A factual reference to Akili Hight's technology leadership, practical AI education, newsletter, digital resources, and related ventures." },
+  { path: "/privacy", title: "Privacy | Akili Hight", description: "How AkiliHight.com uses information submitted through its contact and newsletter forms, and how to contact Akili about privacy questions." },
+  { path: "/terms", title: "Terms | Akili Hight", description: "Information about educational content, responsible AI use, external services, and the current availability of digital products on AkiliHight.com." },
+] as const;

@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { EXTERNAL_LINKS, newsletterBenefits } from "@/config/platform";
 
 
 const schema = z.object({
@@ -99,9 +100,7 @@ const NewsletterSection = () => {
           The Everyday AI Digest
         </h2>
         <p className="text-lg text-muted-foreground mb-6">
-          Join the free weekly newsletter that breaks down how artificial
-          intelligence is changing our world in plain English. No computer
-          science degree required.
+          One practical AI idea each week, explained in plain English. No computer science degree required.
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -132,7 +131,7 @@ const NewsletterSection = () => {
                 maxLength={50}
                 autoComplete="given-name"
                 required
-                className="bg-white"
+                className="bg-card"
                 aria-invalid={!!errors.firstName}
                 aria-describedby={
                   errors.firstName ? "newsletter-first-name-error" : undefined
@@ -158,7 +157,7 @@ const NewsletterSection = () => {
                 maxLength={255}
                 autoComplete="email"
                 required
-                className="bg-white"
+                className="bg-card"
                 aria-invalid={!!errors.email}
                 aria-describedby={
                   errors.email ? "newsletter-email-error" : undefined
@@ -201,6 +200,11 @@ const NewsletterSection = () => {
           </p>
 
         </form>
+        <a href={EXTERNAL_LINKS.kitArchive} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex min-h-11 items-center text-sm font-medium text-primary">Browse past issues →</a>
+        <div className="mt-8 border-t border-border pt-7 text-left">
+          <h3 className="text-base font-semibold">Each issue includes:</h3>
+          <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">{newsletterBenefits.map((benefit) => <li key={benefit} className="flex gap-3"><span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />{benefit}</li>)}</ul>
+        </div>
       </div>
     </section>
   );

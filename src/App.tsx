@@ -10,6 +10,13 @@ import Ecosystem from "./pages/Ecosystem.tsx";
 import WorkshopFlyer from "./pages/WorkshopFlyer.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToHash from "./components/ScrollToHash.tsx";
+import Shop from "./pages/Shop";
+import StarterKit from "./pages/StarterKit";
+import Newsletter from "./pages/Newsletter";
+import Resources from "./pages/Resources";
+import AiProfile from "./pages/AiProfile";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +33,13 @@ const App = () => (
           <Route path="/learning" element={<Learning />} />
           <Route path="/ecosystem" element={<Ecosystem />} />
           <Route path="/workshops/flyer" element={<WorkshopFlyer />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/products/ai-starter-kit" element={<StarterKit />} />
+          <Route path="/newsletter" element={<Newsletter />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/ai-profile" element={<AiProfile />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

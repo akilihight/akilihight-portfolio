@@ -11,7 +11,7 @@ const ScrollToHash = () => {
       const tryScroll = () => {
         const el = document.getElementById(id);
         if (el) {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
+          el.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
         } else if (attempts < 20) {
           attempts++;
           setTimeout(tryScroll, 50);

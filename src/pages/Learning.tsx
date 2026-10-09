@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import PageSeo from "@/components/PageSeo";
 import { Sparkles, Briefcase, Users } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -53,16 +53,9 @@ const principles = [
 
 const Learning = () => (
   <>
-    <Helmet>
-      <title>AI Learning &amp; Career Readiness | Akili Hight</title>
-      <meta name="description" content="Practical AI learning and career readiness for professionals, job seekers, teams, and communities. Build confidence using AI tools for work and everyday life." />
-      <link rel="canonical" href="https://akilihight.com/learning" />
-      <meta property="og:title" content="AI Learning & Career Readiness | Akili Hight" />
-      <meta property="og:description" content="Practical AI learning and career readiness for professionals, job seekers, teams, and communities." />
-      <meta property="og:url" content="https://akilihight.com/learning" />
-    </Helmet>
+    <PageSeo path="/learning" />
     <Header />
-    <main>
+    <main id="main-content">
       {/* Hero */}
       <section className="pt-20 pb-16 bg-gradient-to-b from-background to-secondary/50">
         <div className="container mx-auto px-6 lg:px-16 max-w-3xl">

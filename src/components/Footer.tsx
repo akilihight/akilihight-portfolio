@@ -3,6 +3,12 @@ const navLinks = [
   { label: "Ecosystem", href: "/ecosystem" },
   { label: "About", href: "/#about" },
   { label: "Contact", href: "/#cta" },
+  { label: "Newsletter", href: "/newsletter" },
+  { label: "Shop", href: "/shop" },
+  { label: "Resources", href: "/resources" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
+  { label: "AI Profile", href: "/ai-profile" },
 ];
 
 const social = [
@@ -13,9 +19,9 @@ const social = [
 
 const Footer = () => (
   <footer className="border-t border-border/50 py-10">
-    <div className="container mx-auto px-6 lg:px-16 max-w-5xl flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+    <div className="container mx-auto px-5 lg:px-16 max-w-5xl flex flex-col gap-6">
       <p className="text-sm text-muted-foreground">© 2026 Akili Hight</p>
-      <nav className="flex flex-wrap gap-x-6 gap-y-2">
+      <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-6 gap-y-2">
         {navLinks.map((l) => (
           <a key={l.href} href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             {l.label}

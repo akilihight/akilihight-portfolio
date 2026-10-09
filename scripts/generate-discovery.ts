@@ -1,0 +1,9 @@
+import { writeFileSync } from "node:fs";
+import { PUBLIC_PAGES } from "../src/config/public-pages";
+import { KIT_PRODUCTS, SITE_URL, isProductLive } from "../src/config/platform";
+
+const escapeXml = (value: string) => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+writeFileSync("public/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${PUBLIC_PAGES.map((page) => `  <url><loc>${escapeXml(SITE_URL + page.path)}</loc></url>`).join("\n")}\n</urlset>\n`);
+const pages = PUBLIC_PAGES.filter((page) => page.path !== "/shop" && !page.path.startsWith("/products/"));
+const products = Object.values(KIT_PRODUCTS).filter((product) => isProductLive(product));
+writeFileSync("public/llms.txt", `# Akili Hight\n\n> Practical AI for people and organizations that want clarity, confidence, and useful results.\n\nAkili Hight is a technology and program leader, consultant, author, and educator. This site provides practical AI learning, The Everyday AI Digest, workshop information, and organizational advisory pathways. Prior organizational experience does not represent direct Hight Networks contracts unless specifically identified.\n\n## Public reference and learning pages\n\n${pages.map((page) => `- [${page.title}](${SITE_URL}${page.path}): ${page.description}`).join("\n")}\n\n## Newsletter archive\n\n- [The Everyday AI Digest](https://akili-hight.kit.com): Publication archive hosted on Kit.\n${products.length ? `\n## Available digital products\n\n${products.map((p) => `- [${p.title}](${SITE_URL}${p.detailUrl}): ${p.description}`).join("\n")}\n` : ""}`);

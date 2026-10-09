@@ -1,6 +1,8 @@
-import { Helmet } from "react-helmet-async";
+import PageSeo from "@/components/PageSeo";
 import { Building2, Users, MessageSquareCode, Workflow, Briefcase, ShieldCheck } from "lucide-react";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 import akiliInstructor from "@/assets/akili-instructor.jpg.asset.json";
 
 const CALENDLY = "https://calendly.com/hightnetworksconsulting/30min";
@@ -52,7 +54,7 @@ const tiers = [
     ideal: "Leadership teams, conferences, and department kickoffs.",
   },
   {
-    title: "4-Week Masterclass Cohort",
+    title: "4-Week Learning Cohort",
     format: "Weekly 60–90 Min Modules",
     ideal: "Workforce upskilling, libraries, parks & rec, and community programs.",
   },
@@ -84,16 +86,9 @@ const comingSoon = [
 
 const Workshops = () => (
   <>
-    <Helmet>
-      <title>Workshops & Workforce Empowerment | Akili Hight</title>
-      <meta name="description" content="AI literacy workshops, executive briefings, and hands-on masterclasses for enterprise teams, public institutions, and community partners." />
-      <link rel="canonical" href="https://akilihight.com/workshops" />
-      <meta property="og:title" content="Workshops & Workforce Empowerment" />
-      <meta property="og:description" content="Practical AI literacy, executive briefings, and hands-on masterclasses for organizations and communities." />
-      <meta property="og:url" content="https://akilihight.com/workshops" />
-    </Helmet>
+    <PageSeo path="/workshops" />
     <Header />
-    <main>
+    <main id="main-content">
       {/* Page header */}
       <section className="pt-20 pb-12 bg-gradient-to-b from-background to-secondary/50">
         <div className="container mx-auto px-6 lg:px-16 max-w-3xl text-center">
@@ -101,7 +96,7 @@ const Workshops = () => (
             Workshops & Workforce Empowerment
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground/80 leading-relaxed">
-            Practical AI literacy, executive briefings, and hands-on masterclasses designed for enterprise teams, public institutions, and forward-thinking organizations.
+            Practical AI learning for people, communities, and teams, with a separate pathway for organizational readiness and leadership.
           </p>
         </div>
       </section>
@@ -122,17 +117,17 @@ const Workshops = () => (
       </section>
 
       {/* Featured Workshop */}
-      <section className="py-20 border-t border-border/50">
+      <section id="everyday-ai" className="scroll-mt-28 py-20 border-t border-border/50">
         <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
           <div className="max-w-3xl">
             <p className="text-sm font-medium text-primary/80 uppercase tracking-wider mb-3">
-              Featured Masterclass
+              Beginner and community learning
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">
               Everyday AI Made Simple
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              A 4-week interactive masterclass or intensive 1-day executive briefing covering ChatGPT, Gemini, Claude, and Copilot.
+              A practical beginner workshop series for people who want to understand and confidently use generative AI.
             </p>
             <div className="space-y-4 text-base text-muted-foreground leading-relaxed mb-12">
               <p>
@@ -210,7 +205,7 @@ const Workshops = () => (
               href="/workshops/flyer"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg bg-primary px-10 py-4 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              className="inline-flex min-h-11 items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               View &amp; Download Printable Flyer (PDF)
             </a>
@@ -262,7 +257,7 @@ const Workshops = () => (
                 key={c.title}
                 className="rounded-2xl border border-border/70 bg-secondary/30 p-6 opacity-80"
               >
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                   <h3 className="text-lg font-semibold text-foreground">{c.title}</h3>
                   <span className="text-xs uppercase tracking-wider text-muted-foreground/70 border border-border rounded-full px-2 py-0.5">
                     Coming soon
@@ -282,17 +277,16 @@ const Workshops = () => (
             Interested in bringing a workshop to your organization, agency, library, community center, school, or event?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <Button asChild size="lg" className="h-auto min-h-11 whitespace-normal"><a
               href={CALENDLY}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg bg-primary px-10 py-4 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Book a Free Intro Call
-            </a>
+            </a></Button>
             <a
               href={SOW_MAILTO}
-              className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-4 text-base font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+              className="inline-flex min-h-11 items-center justify-center text-sm font-medium text-primary underline-offset-4 hover:underline"
             >
               Request Workshop SOW & Syllabus
             </a>
@@ -300,6 +294,7 @@ const Workshops = () => (
         </div>
       </section>
     </main>
+    <Footer />
   </>
 );
 

@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
 const HowItAllComesTogetherSection = () => (
-  <section className="py-20 bg-muted/30">
+  <section id="ecosystem" className="scroll-mt-28 py-20 bg-muted/30">
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">
         Ideas Into Reality
@@ -37,6 +40,7 @@ const HowItAllComesTogetherSection = () => (
       <p className="text-base text-muted-foreground leading-relaxed max-w-2xl">
         The same approach I bring to technology and business: clarity, structure, creativity, and execution.
       </p>
+      <Button asChild className="mt-6"><Link to="/ecosystem">Explore the Ecosystem</Link></Button>
     </div>
   </section>
 );

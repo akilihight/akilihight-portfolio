@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
 const bullets = [
   "Practical examples for work, home, and daily life",
   "Prompting basics, privacy, safety, and responsible AI use",
@@ -7,7 +10,7 @@ const bullets = [
 const FeaturedWorkshopSection = () => (
   <section id="workshop" className="scroll-mt-24 py-20">
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
-      <div className="rounded-2xl border border-border/70 bg-card p-8 md:p-10 grid gap-8 md:grid-cols-5 md:items-center">
+      <div className="grid gap-8 md:grid-cols-5 md:items-center">
         <div className="md:col-span-3">
           <p className="text-[11px] font-semibold text-primary/80 uppercase tracking-wider mb-2">
             Featured Workshop
@@ -16,7 +19,7 @@ const FeaturedWorkshopSection = () => (
             Everyday AI Made Simple
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed mb-4">
-            Practical AI skills for everyday life — a beginner-friendly session on using tools like ChatGPT, Gemini, Claude, and Copilot with confidence.
+            A practical beginner workshop series for people who want to understand and confidently use generative AI.
           </p>
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold text-primary">
             ✓ No technical experience required
@@ -31,12 +34,8 @@ const FeaturedWorkshopSection = () => (
               </li>
             ))}
           </ul>
-          <a
-            href="/workshops"
-            className="inline-flex items-center justify-center rounded-lg bg-primary px-7 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            View Workshop
-          </a>
+          <Button asChild><Link to="/workshops#everyday-ai">Explore Workshops</Link></Button>
+          <div className="mt-6 border-t border-border pt-5"><h3 className="text-base font-semibold">AI Readiness for Leaders</h3><p className="mt-2 text-sm text-muted-foreground">An organizational learning offering in development, focused on opportunities, risks, governance, and responsible adoption.</p><p className="mt-2 text-xs text-muted-foreground">Coming Soon</p></div>
         </div>
       </div>
     </div>

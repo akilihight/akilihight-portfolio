@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { EXTERNAL_LINKS } from "@/config/platform";
+
 const items = [
   {
     title: "AI & Technology Strategy",
@@ -27,7 +31,7 @@ const HowIHelpSection = () => (
     <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">How I Can Help</h2>
       <p className="text-lg text-muted-foreground leading-relaxed mb-12 max-w-3xl">
-        Practical support for individuals, professionals, teams, and organizations.
+        When you need direct support, work with Akili on strategy, learning, or organizational readiness.
       </p>
       <div className="grid md:grid-cols-3 gap-8">
         {items.map((item) => {
@@ -44,7 +48,7 @@ const HowIHelpSection = () => (
                 href={item.href}
                 target={external ? "_blank" : undefined}
                 rel={external ? "noopener noreferrer" : undefined}
-                className="mt-6 inline-flex items-center justify-center self-start rounded-lg text-sm font-medium transition-colors px-6 py-2.5 bg-primary text-primary-foreground hover:bg-primary/90"
+                className="mt-6 inline-flex min-h-11 items-center self-start text-sm font-medium text-primary underline-offset-4 hover:underline"
               >
                 {item.cta}
               </a>
@@ -52,6 +56,7 @@ const HowIHelpSection = () => (
           );
         })}
       </div>
+      <div className="mt-8"><Button asChild><a href={EXTERNAL_LINKS.introCall} target="_blank" rel="noopener noreferrer">Work With Akili</a></Button><p className="mt-4 text-sm text-muted-foreground"><Link to="/ecosystem" className="text-primary underline-offset-4 hover:underline">Explore the experience and ventures behind the work.</Link></p></div>
     </div>
   </section>
 );

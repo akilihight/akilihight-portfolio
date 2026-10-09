@@ -1,10 +1,21 @@
 # Akili Hight
 
-> Clarity, AI readiness, and practical execution for people, founders, and teams. Workshops and 1:1 guidance to help you understand AI, build confidence, and move forward with structure.
+> Practical AI for people and organizations that want clarity, confidence, and useful results.
 
-Akili Hight helps individuals, founders, and teams cut through complexity, align priorities, and take clear next steps. The site offers free intro calls, educational workshops on everyday AI, and information about Akili's broader ecosystem of work.
+Akili Hight is a technology and program leader, consultant, author, and educator. This site provides practical AI learning, The Everyday AI Digest, workshop information, and organizational advisory pathways. Prior organizational experience does not represent direct Hight Networks contracts unless specifically identified.
 
-## Pages
+## Public reference and learning pages
 
-- [Home](/): Overview of Akili's approach to clarity, AI readiness, and execution, with intro to services and ecosystem.
-- [Workshops](/workshops): Current and upcoming educational workshops — including "Everyday AI Made Simple" — for learning practical AI use.
+- [Akili Hight | Practical AI, Learning & Technology Leadership](https://akilihight.com/): Practical AI guidance, learning resources, and tools for people and organizations. Explore the Everyday AI Digest, workshops, and technology advisory.
+- [AI Learning & Career Readiness | Akili Hight](https://akilihight.com/learning): Build practical AI skills for everyday life, work, and career readiness with learning pathways for people, professionals, and teams.
+- [Practical AI Workshops | Akili Hight](https://akilihight.com/workshops): Explore Everyday AI Made Simple for beginners and community groups, plus organizational AI learning and readiness offerings with Akili Hight.
+- [Innovation Ecosystem | Akili Hight](https://akilihight.com/ecosystem): Explore Akili Hight's technology, advisory, digital-product, and creative ventures, including Hight Networks, CloudBait, and Project Navigator.
+- [The Everyday AI Digest | Akili Hight](https://akilihight.com/newsletter): One practical AI idea each week, explained in plain English. Subscribe to The Everyday AI Digest or browse its publication archive on Kit.
+- [Practical AI Resources | Akili Hight](https://akilihight.com/resources): Find AI learning pathways, workshop information, and newsletter resources organized around getting started, work, careers, small business, and responsible AI.
+- [Akili Hight | Professional & AI Reference Profile](https://akilihight.com/ai-profile): A factual reference to Akili Hight's technology leadership, practical AI education, newsletter, digital resources, and related ventures.
+- [Privacy | Akili Hight](https://akilihight.com/privacy): How AkiliHight.com uses information submitted through its contact and newsletter forms, and how to contact Akili about privacy questions.
+- [Terms | Akili Hight](https://akilihight.com/terms): Information about educational content, responsible AI use, external services, and the current availability of digital products on AkiliHight.com.
+
+## Newsletter archive
+
+- [The Everyday AI Digest](https://akili-hight.kit.com): Publication archive hosted on Kit.

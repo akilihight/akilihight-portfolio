@@ -8,7 +8,7 @@ export default function Newsletter() {
   const issue = newsletterLatestIssue;
   return <PlatformLayout path="/newsletter">
     <PageHeading eyebrow="Free weekly newsletter" title="The Everyday AI Digest" description="Practical AI for people who want clarity, confidence, and useful results. One idea at a time." />
-    <NewsletterSection />
+    <NewsletterSection heading="Get the Free Digest" />
     <section className="py-16"><div className="container max-w-5xl px-5 lg:px-16 grid gap-10 md:grid-cols-2">
       <div><h2 className="text-2xl font-semibold">Who it's for</h2><p className="mt-4 leading-relaxed text-muted-foreground">Curious beginners, working professionals, job seekers, small-business owners, and people helping their teams make sense of AI. You do not need a technical background.</p></div>
       <div><h2 className="text-2xl font-semibold">Read at your own pace.</h2><p className="mt-4 leading-relaxed text-muted-foreground">The publication archive is hosted on Kit. Explore available issues without leaving the connection to Akili's practical learning approach.</p><a href={EXTERNAL_LINKS.kitArchive} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex min-h-11 items-center font-medium text-primary">Read the Archive on Kit ↗</a>

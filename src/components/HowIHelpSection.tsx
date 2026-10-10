@@ -8,7 +8,7 @@ const items = [
     audience: "For Organizations & Leaders",
     desc: "For organizations and leaders making decisions about AI, data, cloud, governance, and transformation.",
     cta: "Explore Advisory",
-    href: "#cta",
+    href: "/#cta",
   },
   {
     title: "AI Learning & Career Readiness",
@@ -35,7 +35,6 @@ const HowIHelpSection = () => (
       </p>
       <div className="grid md:grid-cols-3 gap-8">
         {items.map((item) => {
-          const external = item.href.startsWith("http");
           return (
             <div
               key={item.title}
@@ -44,14 +43,12 @@ const HowIHelpSection = () => (
               <p className="text-[11px] font-semibold uppercase tracking-wider text-primary/80 mb-2">{item.audience}</p>
               <h3 className="text-xl font-semibold text-foreground mb-3">{item.title}</h3>
               <p className="text-muted-foreground leading-relaxed text-[15px] flex-1">{item.desc}</p>
-              <a
-                href={item.href}
-                target={external ? "_blank" : undefined}
-                rel={external ? "noopener noreferrer" : undefined}
+              <Link
+                to={item.href}
                 className="mt-6 inline-flex min-h-11 items-center self-start text-sm font-medium text-primary underline-offset-4 hover:underline"
               >
                 {item.cta}
-              </a>
+              </Link>
             </div>
           );
         })}

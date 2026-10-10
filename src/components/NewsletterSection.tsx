@@ -30,7 +30,7 @@ const valueBadges = [
   { label: "Zero Jargon", icon: Sparkles },
 ];
 
-const NewsletterSection = () => {
+const NewsletterSection = ({ heading = "The Everyday AI Digest" }: { heading?: string }) => {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState<FieldErrors>({});
@@ -97,7 +97,7 @@ const NewsletterSection = () => {
     <section id="newsletter" className="py-20 border-t border-border bg-muted">
       <div className="container mx-auto px-6 lg:px-16 max-w-2xl text-center">
         <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-          The Everyday AI Digest
+          {heading}
         </h2>
         <p className="text-lg text-muted-foreground mb-6">
           One practical AI idea each week, explained in plain English. No computer science degree required.
@@ -195,7 +195,7 @@ const NewsletterSection = () => {
             )}
           </Button>
 
-          <p className="mt-4 text-xs text-muted-foreground/70">
+          <p className="mt-4 text-xs text-muted-foreground">
             No spam. Unsubscribe anytime. Your email stays private.
           </p>
 

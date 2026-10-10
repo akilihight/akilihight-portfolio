@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const navLinks = [
   { label: "How I Can Help", href: "/#how-i-help" },
   { label: "Ecosystem", href: "/ecosystem" },
@@ -23,9 +25,9 @@ const Footer = () => (
       <p className="text-sm text-muted-foreground">© 2026 Akili Hight</p>
       <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-6 gap-y-2">
         {navLinks.map((l) => (
-          <a key={l.href} href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <Link key={l.href} to={l.href} className="inline-flex min-h-11 items-center text-sm text-muted-foreground hover:text-foreground transition-colors">
             {l.label}
-          </a>
+          </Link>
         ))}
       </nav>
       <div className="flex flex-wrap gap-x-6 gap-y-2">

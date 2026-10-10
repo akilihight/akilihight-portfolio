@@ -5,7 +5,6 @@ import { ProductAction } from "@/components/ProductCard";
 import { KIT_PRODUCTS, SITE_URL, isProductLive } from "@/config/platform";
 
 const faqs = [
-  { question: "Is the kit available now?", answer: "Not yet. The kit is in development. You can join The Everyday AI Digest for availability updates; no purchase is required." },
   { question: "Do I need a technical background?", answer: "The planned kit is designed for beginners. It focuses on practical language and everyday tasks rather than programming." },
   { question: "Do I need a paid AI subscription?", answer: "Paid tool requirements have not been finalized. Any requirements will be explained before the product becomes available." },
   { question: "Does this include a consultation?", answer: "The kit is intended as self-service learning. Workshops and advisory are separate pathways for people who want direct support." },
@@ -15,6 +14,7 @@ const faqs = [
 export default function StarterKit() {
   const product = KIT_PRODUCTS.aiStarterKit;
   const live = isProductLive(product);
+  const availabilityFaq = { question: "Is the kit available now?", answer: live ? "Yes. Use the product link to purchase through Kit Commerce. Kit handles checkout and digital delivery." : "Not yet. The kit is in development. You can join The Everyday AI Digest for availability updates; no purchase is required." };
   const breadcrumbs = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
     { "@type": "ListItem", position: 2, name: "Shop", item: `${SITE_URL}/shop` },
@@ -49,7 +49,7 @@ export default function StarterKit() {
       <div><h2 className="text-2xl font-semibold">Tools it applies to</h2><p className="mt-4 leading-relaxed text-muted-foreground">The proposed overview includes ChatGPT, Claude, Gemini, Copilot, and Perplexity. The focus is learning transferable habits, not promising identical features across tools.</p></div>
     </div></section>
     <section className="border-y border-border py-14"><div className="container max-w-5xl px-5 lg:px-16"><h2 className="text-2xl font-semibold">Responsible use comes first.</h2><p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">Check important claims against reliable sources. Do not enter sensitive personal, customer, or organizational information without permission and an appropriate tool policy. AI output does not replace professional judgment or qualified advice.</p></div></section>
-    <section className="py-16"><div className="container max-w-3xl px-5"><h2 className="mb-7 text-2xl font-semibold">Frequently asked questions</h2>{faqs.map((faq) => <details key={faq.question} className="border-b border-border py-5"><summary className="cursor-pointer font-medium">{faq.question}</summary><p className="mt-3 leading-relaxed text-muted-foreground">{faq.answer}</p></details>)}</div></section>
+    <section className="py-16"><div className="container max-w-3xl px-5"><h2 className="mb-7 text-2xl font-semibold">Frequently asked questions</h2>{[availabilityFaq, ...faqs].map((faq) => <details key={faq.question} className="border-b border-border py-5"><summary className="cursor-pointer font-medium">{faq.question}</summary><p className="mt-3 leading-relaxed text-muted-foreground">{faq.answer}</p></details>)}</div></section>
     <section className="pb-16"><div className="container max-w-5xl px-5 lg:px-16"><h2 className="text-2xl font-semibold">Related free learning</h2><p className="mt-3 text-muted-foreground">Start with the existing learning pathways while the kit is in development.</p><Link to="/resources#getting-started" className="mt-5 inline-flex min-h-11 items-center font-medium text-primary">Explore beginner resources →</Link></div></section>
     <NewsletterSection />
   </PlatformLayout>;

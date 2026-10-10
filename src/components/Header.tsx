@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { EXTERNAL_LINKS } from "@/config/platform";
-import ahLogo from "@/assets/ah-monogram-flyer.png";
+import ahLogo from "@/assets/ah-logo.png.asset.json";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -23,7 +23,7 @@ const Header = () => {
       <div className="container mx-auto px-5 lg:px-10 flex items-center justify-between gap-5 h-20">
         <Link to="/" className="flex items-center shrink-0" aria-label="Akili Hight home">
           <img
-            src={ahLogo}
+            src={ahLogo.url}
             alt="Akili Hight"
             className="h-10 md:h-11 w-auto object-contain"
           />

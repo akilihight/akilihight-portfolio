@@ -20,3 +20,10 @@
 
 ### Activation blockers outside Phase 1
 - [ ] Activate Starter Kit only after owner-approved name, description, deliverables, price, file, artwork if used, Kit checkout URL, and digital-goods/refund policy are supplied and explicit live status is approved.
+
+## Phase 2: launch readiness and conversion path
+
+- [x] Restructure the Starter Kit page around the problem-to-signup journey with the "More than prompts" philosophy section.
+- [x] Add draft-safe resource article configuration and a reusable ArticleLayout template (no articles published).
+- [x] Add internal launch checklist and provider-neutral measurement notes in docs/starter-kit-launch-checklist.md.
+- [x] Verify commerce gate, newsletter/contact flows, routes, anchors, and mobile layouts remain intact.

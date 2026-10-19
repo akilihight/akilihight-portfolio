@@ -106,6 +106,26 @@ export const resourceCategories = [
 
 export const futureResourceTopics = ["ChatGPT for Beginners", "ChatGPT vs. Claude vs. Gemini", "How to Write Better AI Prompts", "How to Check an AI Answer", "AI Privacy for Beginners", "AI for Job Seekers", "AI for Small Business"];
 
+export type ResourceArticle = {
+  title: string;
+  slug: string;
+  summary: string;
+  category: string;
+  author: string;
+  publishedAt: string;
+  updatedAt: string | null;
+  status: "draft" | "published";
+  image: { src: string; alt: string } | null;
+  seoTitle: string;
+  metaDescription: string;
+};
+
+// Real guides are added here when ready. Drafts are never rendered publicly,
+// never added to the sitemap, and never receive structured data.
+export const resourceArticles: ResourceArticle[] = [];
+
+export const publishedResourceArticles = resourceArticles.filter((article) => article.status === "published");
+
 export const visitorPathways = [
   { title: "Understand AI", description: "Start with the basics and learn what today's AI tools can actually do.", href: "/resources#getting-started" },
   { title: "Use AI at Work", description: "Use AI more effectively for writing, research, meetings, planning, and everyday work.", href: "/resources#ai-at-work" },

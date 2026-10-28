@@ -68,7 +68,7 @@ export const KIT_PRODUCTS: Record<string, DigitalProduct> = {
     ...pending,
     id: "aiStarterKit", public: true, title: "AI Confidence Starter Kit",
     subtitle: "Practical AI for everyday life and work.",
-    audience: "People getting started with AI at home and at work",
+    audience: "people getting started with AI at home and at work",
     description: "A beginner-friendly guide to understanding AI, choosing the right tools, writing better prompts, verifying answers, protecting your information, and putting AI to useful work.",
     category: "Getting started", detailUrl: "/products/ai-starter-kit",
     plannedTopics: [

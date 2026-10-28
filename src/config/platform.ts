@@ -27,7 +27,7 @@ export type DigitalProduct = {
   description: string;
   category: string;
   public: boolean;
-  status: "live" | "coming-soon";
+  status: "live" | "comingSoon";
   detailUrl: string | null;
   checkoutUrl: string | null;
   price: number | null;
@@ -38,12 +38,29 @@ export type DigitalProduct = {
   descriptionFinalized: boolean;
   contentsApproved: boolean;
   plannedTopics: string[];
+  introductoryPriceLabel: string | null;
+  format: string | null;
+  version: string | null;
+  publicationDate: string | null;
+  includedDeliverables: string[];
+  learningOutcomes: string[];
+  licenseSummary: string | null;
+  refundPolicySummary: string | null;
+  personalUseLicense: string | null;
+  refundPolicy: string | null;
+  deliveryDisclosure: string | null;
+  previewUrl: string | null;
+  faqs: { question: string; answer: string }[];
 };
 
 const pending = {
   checkoutUrl: null, price: null, currency: "USD" as const, thumbnail: null,
   finalFileUrl: null, nameFinalized: false, descriptionFinalized: false,
-  contentsApproved: false, status: "coming-soon" as const,
+  contentsApproved: false, status: "comingSoon" as const,
+  introductoryPriceLabel: null, format: null, version: null, publicationDate: null,
+  includedDeliverables: [], learningOutcomes: [], licenseSummary: null,
+  refundPolicySummary: null, personalUseLicense: null, refundPolicy: null,
+  deliveryDisclosure: null, previewUrl: null, faqs: [],
 };
 
 export const KIT_PRODUCTS: Record<string, DigitalProduct> = {
@@ -90,9 +107,19 @@ export function isKitCheckoutUrl(value: string | null): value is string {
 export function isProductLive(product: DigitalProduct, policy = DIGITAL_GOODS_POLICY): boolean {
   return product.public && product.status === "live" && product.nameFinalized && !!product.title.trim()
     && product.descriptionFinalized && !!product.description.trim() && product.contentsApproved
-    && product.plannedTopics.length > 0 && product.price !== null && Number.isFinite(product.price) && product.price > 0
+    && product.includedDeliverables.length > 0 && product.includedDeliverables.every((item) => !!item.trim())
+    && !!product.audience.trim() && !!product.format?.trim()
+    && !!product.licenseSummary?.trim() && !!product.refundPolicySummary?.trim()
+    && !!product.personalUseLicense?.trim() && !!product.refundPolicy?.trim() && !!product.deliveryDisclosure?.trim()
+    && product.price !== null && Number.isFinite(product.price) && product.price > 0
     && isHttpsUrl(product.finalFileUrl) && (!product.thumbnail || (product.thumbnail.approved && !!product.thumbnail.src && !!product.thumbnail.alt))
     && isKitCheckoutUrl(product.checkoutUrl) && policy.approved && !!policy.text?.trim();
+}
+
+// Price text is derived from the one confirmed numeric price, never entered separately.
+export function getProductDisplayPrice(product: DigitalProduct): string | null {
+  if (!isProductLive(product) || product.price === null) return null;
+  return new Intl.NumberFormat("en-US", { style: "currency", currency: product.currency }).format(product.price);
 }
 
 export const resourceCategories = [

@@ -26,6 +26,7 @@ export default function ProductCard({ product, featured = false }: { product: Di
       <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">{product.description}</p>
       <p className="mt-4 text-sm text-muted-foreground">{`For ${product.audience.trim().replace(/[.!?]+$/, "")}.`}</p>
       {live && <><p className="mt-5 text-xl font-semibold">{getProductDisplayPrice(product)}</p><p className="mt-2 text-sm text-muted-foreground">{product.format}{product.introductoryPriceLabel?.trim() && ` · ${product.introductoryPriceLabel}`}</p></>}
+      {live && product.thumbnail && <div className="mt-6"><h3 className="text-lg font-semibold">What You’ll Receive</h3><ul className="mt-4 space-y-3">{product.includedDeliverables.map((item) => <li key={item} className="flex gap-3 text-sm leading-relaxed text-muted-foreground"><Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />{item}</li>)}</ul></div>}
       <div className="mt-7 flex flex-wrap items-center gap-5"><ProductAction product={product} />
         {featured && <ProductSecondaryLink product={product} details />}
       </div>

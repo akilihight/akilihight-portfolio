@@ -52,11 +52,11 @@ No analytics provider is installed and none of these events are currently
 measured. When a provider is chosen, the recommended provider-neutral events
 are:
 
-- `newsletter_signup` — successful digest subscription
-- `newsletter_archive_click` — click on the Kit archive link
-- `starter_kit_view` — view of `/products/ai-starter-kit`
-- `starter_kit_notify_click` — click through to the digest notification pathway
-- `starter_kit_checkout_click` — click on the Kit checkout link (only when live)
-- `starter_kit_preview_click` — click on an approved preview link (only when live)
-- `workshop_inquiry` — workshop inquiry submission or click
-- `intro_call_click` — click on the Book a Free Intro Call link
+- `newsletter_signup`: successful digest subscription
+- `newsletter_archive_click`: click on the Kit archive link
+- `starter_kit_view`: view of `/products/ai-starter-kit`
+- `starter_kit_notify_click`: click through to the digest notification pathway
+- `starter_kit_checkout_click`: click on the Kit checkout link (only when live)
+- `starter_kit_preview_click`: click on an approved preview link (only when live)
+- `workshop_inquiry`: workshop inquiry submission or click
+- `intro_call_click`: click on the Book a Free Intro Call link

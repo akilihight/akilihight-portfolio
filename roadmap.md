@@ -30,7 +30,7 @@
 
 ## Phase 3: commerce readiness
 
-- [ ] Correct shared audience copy and centralize confirmed launch information.
-- [ ] Prepare gated live product and Terms presentation without activating checkout.
-- [ ] Verify coming-soon/live safeguards, signup pathway, keyboard access and screen sizes.
-- [ ] Document defects, changes, verification results and remaining owner inputs.
+- [x] Correct shared audience copy and centralize confirmed launch information.
+- [x] Prepare gated live product and Terms presentation without activating checkout.
+- [x] Verify coming-soon/live safeguards, signup pathway, keyboard access and screen sizes.
+- [x] Document defects, changes, verification results and remaining owner inputs.

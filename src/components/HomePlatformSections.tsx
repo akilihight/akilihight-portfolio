@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Briefcase, Search, Store, Users, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { visitorPathways, KIT_PRODUCTS } from "@/config/platform";
+import { visitorPathways, KIT_PRODUCTS, isProductLive } from "@/config/platform";
 import ProductCard from "@/components/ProductCard";
 import ResourceCollection from "@/components/ResourceCollection";
 
@@ -27,7 +27,7 @@ export function FeaturedResourcesSection() {
 export function FinalPathwaysSection() {
   return <section className="border-y border-border bg-secondary/40 py-16"><div className="container max-w-5xl px-5 lg:px-16"><h2 className="text-2xl font-semibold md:text-3xl">Choose your next step.</h2><div className="mt-8 grid gap-8 sm:grid-cols-3">
     <div><h3 className="text-lg font-semibold">Learn</h3><p className="mt-2 mb-4 text-sm text-muted-foreground">Explore free AI learning resources.</p><Link className="inline-flex min-h-11 items-center text-sm font-medium text-primary" to="/resources">Explore resources →</Link></div>
-    <div><h3 className="text-lg font-semibold">Get Practical Tools</h3><p className="mt-2 mb-4 text-sm text-muted-foreground">Explore self-service learning in development.</p><Button asChild><Link to="/shop">Explore the Starter Kit</Link></Button></div>
+    <div><h3 className="text-lg font-semibold">Get Practical Tools</h3><p className="mt-2 mb-4 text-sm text-muted-foreground">{isProductLive(KIT_PRODUCTS.aiStarterKit) ? "Explore self-service AI learning." : "Explore self-service learning in development."}</p><Button asChild><Link to="/shop">Explore the Starter Kit</Link></Button></div>
     <div><h3 className="text-lg font-semibold">Work With Me</h3><p className="mt-2 mb-4 text-sm text-muted-foreground">Find workshops and advisory support.</p><Link className="inline-flex min-h-11 items-center text-sm font-medium text-primary" to="/#how-i-help">Explore services →</Link></div>
   </div></div></section>;
 }

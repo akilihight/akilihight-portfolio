@@ -27,3 +27,10 @@
 - [x] Add draft-safe resource article configuration and a reusable ArticleLayout template (no articles published).
 - [x] Add internal launch checklist and provider-neutral measurement notes in docs/starter-kit-launch-checklist.md.
 - [x] Verify commerce gate, newsletter/contact flows, routes, anchors, and mobile layouts remain intact.
+
+## Phase 3: commerce readiness
+
+- [x] Correct shared audience copy and centralize confirmed launch information.
+- [x] Prepare gated live product and Terms presentation without activating checkout.
+- [x] Verify coming-soon/live safeguards, signup pathway, keyboard access and screen sizes.
+- [x] Document defects, changes, verification results and remaining owner inputs.

@@ -39,3 +39,9 @@
 
 - [x] Remove the product-file URL from client configuration and the launch gate; Kit Commerce stores and delivers the paid file.
 - [x] Replace it with non-sensitive fulfillment metadata (deliveryProvider, fulfillmentConfigured) and update checklist, handoff, and tests.
+
+## Final commerce activation
+
+- [x] Apply owner-approved Starter Kit configuration: live status, $19 price, exact Kit checkout URL, version 1.0, October 2026, format, audience, description, 11 deliverables, delivery disclosure, license summary, and approved CTA label.
+- [ ] Complete activation once the owner supplies the full personal-use license text and refund policy text; the gate holds the product closed until then.
+- [ ] Update launch checklist and handoff docs after activation; publish only on explicit owner approval.

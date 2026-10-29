@@ -78,7 +78,7 @@ and `DIGITAL_GOODS_POLICY`:
 1. Final approved name and short description, with finalized flags.
 2. Final audience statement and exact included deliverables, with contents approval.
 3. Confirmed positive USD price and product format.
-4. Final HTTPS product file URL for readiness verification; Kit handles delivery.
+4. Confirmation that the paid file is uploaded and delivery is configured inside Kit Commerce (`fulfillmentConfigured: true`). No product-file URL is stored on this site: `src/config/platform.ts` is bundled into the browser, so Kit Commerce alone stores and delivers the paid file. No Stripe credentials, Kit credentials, private file URLs, or secrets belong in frontend configuration.
 5. Real public HTTPS Kit Commerce checkout URL.
 6. Approved digital-product terms and explicit policy approval.
 7. Approved personal-use license and license summary.

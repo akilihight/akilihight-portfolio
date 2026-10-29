@@ -9,7 +9,7 @@ const ready: DigitalProduct = {
   ...KIT_PRODUCTS.aiStarterKit, status: "live", nameFinalized: true,
   descriptionFinalized: true, contentsApproved: true, price: 25,
   format: "Test PDF", includedDeliverables: ["Test approved guide"],
-  finalFileUrl: "https://example.com/test.pdf", checkoutUrl: "https://akili-hight.kit.com/products/test",
+  fulfillmentConfigured: true, checkoutUrl: "https://akili-hight.kit.com/products/test",
   licenseSummary: "Test license", refundPolicySummary: "Test refund",
   personalUseLicense: "Test personal license", refundPolicy: "Test policy", deliveryDisclosure: "Test delivery",
 };

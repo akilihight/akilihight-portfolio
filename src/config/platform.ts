@@ -33,7 +33,12 @@ export type DigitalProduct = {
   price: number | null;
   currency: "USD";
   thumbnail: { src: string; alt: string; approved: boolean } | null;
-  finalFileUrl: string | null;
+  // Fulfillment is handled entirely inside Kit Commerce. This file is bundled
+  // into the browser, so no paid-product download URL, credential, or secret
+  // may ever be stored here. fulfillmentConfigured is only an owner-confirmed
+  // readiness flag; it is not proof of payment or delivery.
+  deliveryProvider: "kit";
+  fulfillmentConfigured: boolean;
   nameFinalized: boolean;
   descriptionFinalized: boolean;
   contentsApproved: boolean;
@@ -55,7 +60,8 @@ export type DigitalProduct = {
 
 const pending = {
   checkoutUrl: null, price: null, currency: "USD" as const, thumbnail: null,
-  finalFileUrl: null, nameFinalized: false, descriptionFinalized: false,
+  deliveryProvider: "kit" as const, fulfillmentConfigured: false,
+  nameFinalized: false, descriptionFinalized: false,
   contentsApproved: false, status: "comingSoon" as const,
   introductoryPriceLabel: null, format: null, version: null, publicationDate: null,
   includedDeliverables: [], learningOutcomes: [], licenseSummary: null,
@@ -112,7 +118,8 @@ export function isProductLive(product: DigitalProduct, policy = DIGITAL_GOODS_PO
     && !!product.licenseSummary?.trim() && !!product.refundPolicySummary?.trim()
     && !!product.personalUseLicense?.trim() && !!product.refundPolicy?.trim() && !!product.deliveryDisclosure?.trim()
     && product.price !== null && Number.isFinite(product.price) && product.price > 0
-    && isHttpsUrl(product.finalFileUrl) && (!product.thumbnail || (product.thumbnail.approved && !!product.thumbnail.src && !!product.thumbnail.alt))
+    && product.deliveryProvider === "kit" && product.fulfillmentConfigured
+    && (!product.thumbnail || (product.thumbnail.approved && !!product.thumbnail.src && !!product.thumbnail.alt))
     && isKitCheckoutUrl(product.checkoutUrl) && policy.approved && !!policy.text?.trim();
 }
 

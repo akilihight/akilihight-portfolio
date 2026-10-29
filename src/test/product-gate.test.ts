@@ -5,7 +5,7 @@ const approvedPolicy = { approved: true, text: "Owner-approved test policy" };
 const ready: DigitalProduct = {
   ...KIT_PRODUCTS.aiStarterKit,
   status: "live", nameFinalized: true, descriptionFinalized: true, contentsApproved: true,
-  price: 25, finalFileUrl: "https://example.com/approved-file.pdf", checkoutUrl: "https://akili-hight.kit.com/products/test-kit",
+  price: 25, fulfillmentConfigured: true, checkoutUrl: "https://akili-hight.kit.com/products/test-kit",
   format: "Test PDF", includedDeliverables: ["Test approved guide"],
   licenseSummary: "Test license summary", refundPolicySummary: "Test refund summary",
   personalUseLicense: "Test approved license", refundPolicy: "Test approved refund policy",
@@ -32,8 +32,7 @@ describe("Phase 1 product safeguards", () => {
     ["license summary", { licenseSummary: null }], ["refund summary", { refundPolicySummary: null }],
     ["personal-use license", { personalUseLicense: null }], ["refund policy", { refundPolicy: null }],
     ["delivery disclosure", { deliveryDisclosure: null }],
-    ["finite price", { price: NaN }], ["final file", { finalFileUrl: null }],
-    ["HTTPS file", { finalFileUrl: "http://example.com/file.pdf" }],
+    ["finite price", { price: NaN }], ["Kit fulfillment confirmed", { fulfillmentConfigured: false }],
     ["Kit checkout", { checkoutUrl: "https://example.com/checkout" }],
     ["HTTPS checkout", { checkoutUrl: "http://akili-hight.kit.com/products/test" }],
     ["checkout URL", { checkoutUrl: null }], ["nonempty checkout URL", { checkoutUrl: "" }],
@@ -45,4 +44,24 @@ describe("Phase 1 product safeguards", () => {
   it("requires actual final policy text", () => expect(isProductLive(ready, { approved: true, text: null })).toBe(false));
   it("never treats proposed topics as finalized deliverables", () => expect(isProductLive({ ...ready, includedDeliverables: [], plannedTopics: ["Proposed topic"] }, approvedPolicy)).toBe(false));
   it("keeps the configured starter kit in comingSoon status", () => expect(KIT_PRODUCTS.aiStarterKit.status).toBe("comingSoon"));
+});
+
+describe("Phase 3A paid-file exposure safeguards", () => {
+  it("never stores a paid-product download URL in client-side configuration", () => {
+    const configSource = JSON.stringify(KIT_PRODUCTS);
+    expect(configSource).not.toContain("finalFileUrl");
+    expect(configSource).not.toContain("productFileUrl");
+    for (const product of Object.values(KIT_PRODUCTS)) {
+      expect(product).not.toHaveProperty("finalFileUrl");
+      expect(product).not.toHaveProperty("productFileUrl");
+      expect(product.deliveryProvider).toBe("kit");
+    }
+  });
+  it("does not require any product-file URL for the live gate", () => {
+    expect(isProductLive(ready, approvedPolicy)).toBe(true);
+    expect(JSON.stringify(ready)).not.toContain("finalFileUrl");
+  });
+  it("requires owner-confirmed Kit fulfillment readiness, not a file URL", () => {
+    expect(isProductLive({ ...ready, fulfillmentConfigured: false }, approvedPolicy)).toBe(false);
+  });
 });

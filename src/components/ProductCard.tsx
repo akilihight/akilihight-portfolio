@@ -5,7 +5,7 @@ import { getProductDisplayPrice, isHttpsUrl, isProductLive, type DigitalProduct 
 
 export function ProductAction({ product }: { product: DigitalProduct }) {
   const price = getProductDisplayPrice(product);
-  if (price && isProductLive(product) && product.checkoutUrl) return <Button asChild size="lg" className="h-auto min-h-11 whitespace-normal"><a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer">Get the {product.title} · {price} <ArrowRight className="shrink-0" aria-hidden="true" /></a></Button>;
+  if (price && isProductLive(product) && product.checkoutUrl) return <Button asChild size="lg" className="h-auto min-h-11 whitespace-normal"><a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer">{product.ctaLabel ?? `Get the ${product.title}`} · {price.replace(/\.00$/, "")} <ArrowRight className="shrink-0" aria-hidden="true" /></a></Button>;
   return <Button asChild size="lg" className="h-auto min-h-11 whitespace-normal"><Link to="/newsletter#newsletter">Get Notified <ArrowRight aria-hidden="true" /></Link></Button>;
 }
 

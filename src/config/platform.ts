@@ -39,6 +39,7 @@ export type DigitalProduct = {
   // readiness flag; it is not proof of payment or delivery.
   deliveryProvider: "kit";
   fulfillmentConfigured: boolean;
+  ctaLabel: string | null;
   nameFinalized: boolean;
   descriptionFinalized: boolean;
   contentsApproved: boolean;
@@ -61,6 +62,7 @@ export type DigitalProduct = {
 const pending = {
   checkoutUrl: null, price: null, currency: "USD" as const, thumbnail: null,
   deliveryProvider: "kit" as const, fulfillmentConfigured: false,
+  ctaLabel: null,
   nameFinalized: false, descriptionFinalized: false,
   contentsApproved: false, status: "comingSoon" as const,
   introductoryPriceLabel: null, format: null, version: null, publicationDate: null,

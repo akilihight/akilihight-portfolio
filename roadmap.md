@@ -19,7 +19,7 @@
 - [x] Apply approved Phase 1 refinements: exact homepage order, one public product, available-resource-first presentation, hidden future products, full activation gate, and restrained CTA hierarchy.
 
 ### Activation blockers outside Phase 1
-- [ ] Activate Starter Kit only after owner-approved name, description, deliverables, price, file, artwork if used, Kit checkout URL, and digital-goods/refund policy are supplied and explicit live status is approved.
+- [ ] Activate Starter Kit only after owner-approved name, description, deliverables, price, artwork if used, Kit checkout URL, digital-goods/refund policy, and owner-confirmed Kit fulfillment are supplied and explicit live status is approved. The paid file lives only in Kit Commerce; no download URL is stored in site code.
 
 ## Phase 2: launch readiness and conversion path
 
@@ -34,3 +34,8 @@
 - [x] Prepare gated live product and Terms presentation without activating checkout.
 - [x] Verify coming-soon/live safeguards, signup pathway, keyboard access and screen sizes.
 - [x] Document defects, changes, verification results and remaining owner inputs.
+
+## Phase 3A: remove client-side product file exposure
+
+- [x] Remove the product-file URL from client configuration and the launch gate; Kit Commerce stores and delivers the paid file.
+- [x] Replace it with non-sensitive fulfillment metadata (deliveryProvider, fulfillmentConfigured) and update checklist, handoff, and tests.

@@ -18,7 +18,7 @@ item below before any purchase button, price, or Product/Offer schema appears.
 | Final audience statement | `aiStarterKit.audience` |
 | Price | `aiStarterKit.price` (number, USD) |
 | Currency | `aiStarterKit.currency` (currently `"USD"`) |
-| Final product file URL | `aiStarterKit.finalFileUrl` (must be HTTPS) |
+| Kit fulfillment confirmed | Set `aiStarterKit.fulfillmentConfigured: true` only after the paid file is uploaded and delivery is configured inside Kit Commerce |
 | Approved artwork (optional) | `aiStarterKit.thumbnail` with `approved: true`, `src`, `alt` |
 | Kit Commerce checkout URL | `aiStarterKit.checkoutUrl` (must be a kit.com or convertkit.com HTTPS URL) |
 | Approved digital-goods/refund policy | `DIGITAL_GOODS_POLICY.text` and set `approved: true` |
@@ -30,6 +30,14 @@ item below before any purchase button, price, or Product/Offer schema appears.
 
 The product remains `comingSoon`. The live flag alone cannot bypass missing
 inputs. Do not change status or publish without explicit owner approval.
+
+Kit Commerce stores and delivers the paid file. AkiliHight.com never contains
+or exposes the paid-product download URL: no product-file URL is stored in
+`src/config/platform.ts` or any other client-side code, because that code is
+bundled into the browser. No Stripe credentials, Kit credentials, private file
+URLs, or secrets belong in frontend configuration. `fulfillmentConfigured` is
+only an owner-confirmed readiness flag; it is not proof of payment or delivery.
+The only transaction URL on the site is the public Kit Commerce checkout URL.
 Optional finalized fields: `introductoryPriceLabel`, `version`,
 `publicationDate`, `learningOutcomes`, `faqs`, and HTTPS `previewUrl`.
 Display price is derived from `price` and `currency` by

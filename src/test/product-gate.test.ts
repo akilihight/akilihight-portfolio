@@ -43,7 +43,17 @@ describe("Phase 1 product safeguards", () => {
   it("requires an explicitly approved policy", () => expect(isProductLive(ready, { approved: false, text: "Draft" })).toBe(false));
   it("requires actual final policy text", () => expect(isProductLive(ready, { approved: true, text: null })).toBe(false));
   it("never treats proposed topics as finalized deliverables", () => expect(isProductLive({ ...ready, includedDeliverables: [], plannedTopics: ["Proposed topic"] }, approvedPolicy)).toBe(false));
-  it("keeps the configured starter kit in comingSoon status", () => expect(KIT_PRODUCTS.aiStarterKit.status).toBe("comingSoon"));
+  it("uses the exact approved Kit checkout URL and price", () => {
+    expect(KIT_PRODUCTS.aiStarterKit.checkoutUrl).toBe("https://akili-hight.kit.com/products/ai-confidence-starter-kit?step=checkout");
+    expect(KIT_PRODUCTS.aiStarterKit.price).toBe(19);
+  });
+  it("holds the live-status product closed until owner-approved legal texts land", () => {
+    const kit = KIT_PRODUCTS.aiStarterKit;
+    expect(kit.status).toBe("live");
+    expect(kit.personalUseLicense).toBeNull();
+    expect(kit.refundPolicy).toBeNull();
+    expect(isProductLive(kit)).toBe(false);
+  });
 });
 
 describe("Phase 3A paid-file exposure safeguards", () => {

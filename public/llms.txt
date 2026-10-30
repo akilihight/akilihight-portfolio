@@ -19,3 +19,7 @@ Akili Hight is a technology and program leader, consultant, author, and educator
 ## Newsletter archive
 
 - [The Everyday AI Digest](https://akili-hight.kit.com): Publication archive hosted on Kit.
+
+## Available digital products
+
+- [AI Confidence Starter Kit](https://akilihight.com/products/ai-starter-kit): Build practical AI confidence without technical jargon. This 33-page starter guide shows you how to choose tools, write clearer prompts, verify answers, protect sensitive information, and apply AI to everyday work.

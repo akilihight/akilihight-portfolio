@@ -28,8 +28,18 @@ item below before any purchase button, price, or Product/Offer schema appears.
 | Approved digital delivery disclosure | `aiStarterKit.deliveryDisclosure` |
 | Go live | `aiStarterKit.status: "live"` |
 
-The product remains `comingSoon`. The live flag alone cannot bypass missing
-inputs. Do not change status or publish without explicit owner approval.
+Phase 3B: the owner approved all required public launch inputs and controlled
+activation in preview. The Starter Kit is `live`, priced at $19 USD one-time,
+version 1.0, October 2026, in 33-page digital PDF guide format. All existing
+approval flags and the digital-goods policy are approved. No artwork is used.
+The live flag alone still cannot bypass missing inputs. Do not publish without
+separate explicit owner approval.
+
+The only approved purchase destination is:
+https://akili-hight.kit.com/products/ai-confidence-starter-kit?step=checkout
+Purchase links retain the site's existing new-tab convention with
+`noopener noreferrer`. Kit handles payment and delivery; no payment or
+delivery transaction was performed by this controlled activation.
 
 Kit Commerce stores and delivers the paid file. AkiliHight.com never contains
 or exposes the paid-product download URL: no product-file URL is stored in
@@ -49,8 +59,9 @@ Learning and FAQ sections show only supplied finalized content in the live state
 1. Run `bun scripts/generate-discovery.ts` to regenerate `public/sitemap.xml`
    and `public/llms.txt` so the live product appears in discovery files.
 2. Run the product tests: `bunx vitest run src/test/product-gate.test.ts src/test/product-commerce.test.tsx`.
-3. Verify `/shop` and `/products/ai-starter-kit` show the purchase button,
-   price, and Product/Offer schema exactly once.
+3. Verify `/`, `/shop`, and `/products/ai-starter-kit` show the approved
+   purchase links and price. Product/Offer schema appears once on the product
+   detail page only when the complete gate passes.
 4. Update `newsletterLatestIssue` in `src/config/platform.ts` when a real
    issue should be featured; leave it `null` to show "Read the archive".
 

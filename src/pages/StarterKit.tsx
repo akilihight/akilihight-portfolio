@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import PlatformLayout from "@/components/PlatformLayout";
 import NewsletterSection from "@/components/NewsletterSection";
 import { ProductAction, ProductSecondaryLink } from "@/components/ProductCard";
-import { KIT_PRODUCTS, SITE_URL, getProductDisplayPrice, isProductLive } from "@/config/platform";
+import { KIT_PRODUCTS, SITE_URL, getProductDisplayPrice, getProductSchema, isProductLive } from "@/config/platform";
 
 const outcomes = [
   "Understand what today's AI tools can and cannot do",
@@ -29,19 +29,15 @@ export default function StarterKit() {
     { "@type": "ListItem", position: 2, name: "Shop", item: `${SITE_URL}/shop` },
     { "@type": "ListItem", position: 3, name: product.title, item: `${SITE_URL}${product.detailUrl}` },
   ] };
-  const schema = live && product.price !== null ? { "@context": "https://schema.org", "@graph": [
-    breadcrumbs,
-    { "@type": "Product", name: product.title, description: product.description, url: `${SITE_URL}${product.detailUrl}`,
-      ...(product.thumbnail ? { image: product.thumbnail.src.startsWith("https:") ? product.thumbnail.src : `${SITE_URL}${product.thumbnail.src}` } : {}),
-       offers: { "@type": "Offer", price: product.price, priceCurrency: product.currency, availability: "https://schema.org/InStock", url: product.checkoutUrl } },
-  ] } : breadcrumbs;
+  const productSchema = getProductSchema(product);
+  const schema = productSchema ? { "@context": "https://schema.org", "@graph": [breadcrumbs, productSchema] } : breadcrumbs;
   return <PlatformLayout path="/products/ai-starter-kit" schema={schema}>
     <section className="border-b border-border py-12 md:py-16"><div className="container max-w-5xl px-5 lg:px-16">
       <nav aria-label="Breadcrumb" className="mb-8 text-sm text-muted-foreground"><ol className="flex flex-wrap gap-2"><li><Link to="/">Home</Link></li><li aria-hidden="true">/</li><li><Link to="/shop">Shop</Link></li><li aria-hidden="true">/</li><li aria-current="page">{product.title}</li></ol></nav>
       <p className="mb-3 text-xs font-semibold uppercase text-primary">{live ? "Self-service learning" : "Coming Soon"}</p>
       <h1 className="max-w-3xl text-3xl font-semibold leading-tight md:text-5xl">{product.title}</h1>
       <p className="mt-4 text-xl font-medium">{product.subtitle}</p><p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">{product.description}</p>
-       {live && <p className="mt-5 text-lg font-medium">{getProductDisplayPrice(product)} · {product.format}{product.introductoryPriceLabel?.trim() && ` · ${product.introductoryPriceLabel}`}</p>}
+       {live && <p className="mt-5 text-lg font-medium">{getProductDisplayPrice(product)} USD · One-time purchase · {product.format}{product.introductoryPriceLabel?.trim() && ` · ${product.introductoryPriceLabel}`}</p>}
        {live && (product.version || product.publicationDate) && <p className="mt-2 text-sm text-muted-foreground">{[product.version, product.publicationDate].filter(Boolean).join(" · ")}</p>}
        <div className="mt-7 flex flex-wrap items-center gap-5"><ProductAction product={product} /><ProductSecondaryLink product={product} /></div>
       {!live && <p className="mt-3 text-sm text-muted-foreground">Not yet for sale. Join the digest for availability updates.</p>}

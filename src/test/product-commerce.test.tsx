@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it } from "vitest";
 import { cleanup, render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import ProductCard, { ProductAction, ProductSecondaryLink } from "@/components/ProductCard";
-import { DIGITAL_GOODS_POLICY, KIT_PRODUCTS, getProductDisplayPrice, type DigitalProduct } from "@/config/platform";
+import { DIGITAL_GOODS_POLICY, KIT_PRODUCTS, getProductDisplayPrice, getProductSchema, type DigitalProduct } from "@/config/platform";
 
 const originalPolicy = { ...DIGITAL_GOODS_POLICY };
 const ready: DigitalProduct = {
@@ -18,6 +18,15 @@ function approvePolicy() { Object.assign(DIGITAL_GOODS_POLICY, { approved: true,
 function action(product: DigitalProduct) { return render(<MemoryRouter><ProductAction product={product} /></MemoryRouter>); }
 
 describe("Kit-only commerce behavior", () => {
+  for (const policy of [{ approved: false, text: "Draft policy" }, { approved: true, text: null }]) {
+    it(`withholds purchase, price and schema for incomplete policy ${JSON.stringify(policy)}`, () => {
+      Object.assign(DIGITAL_GOODS_POLICY, policy);
+      const { container } = action(KIT_PRODUCTS.aiStarterKit);
+      expect(container.querySelector("a")?.getAttribute("href")).toBe("/newsletter#newsletter");
+      expect(getProductDisplayPrice(KIT_PRODUCTS.aiStarterKit)).toBeNull();
+      expect(getProductSchema(KIT_PRODUCTS.aiStarterKit)).toBeNull();
+    });
+  }
   it("routes comingSoon notifications to the current newsletter pathway even with complete launch inputs", () => {
     approvePolicy();
     const { container } = action({ ...ready, status: "comingSoon" });

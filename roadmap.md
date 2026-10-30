@@ -18,8 +18,8 @@
 - [x] Prepare the handoff with changes, verification limits, and owner-supplied materials required before commerce activation.
 - [x] Apply approved Phase 1 refinements: exact homepage order, one public product, available-resource-first presentation, hidden future products, full activation gate, and restrained CTA hierarchy.
 
-### Activation blockers outside Phase 1
-- [ ] Activate Starter Kit only after owner-approved name, description, deliverables, price, artwork if used, Kit checkout URL, digital-goods/refund policy, and owner-confirmed Kit fulfillment are supplied and explicit live status is approved. The paid file lives only in Kit Commerce; no download URL is stored in site code.
+### Activation safeguards
+- [x] Owner supplied and approved Starter Kit launch inputs for controlled preview activation. The paid file lives only in Kit Commerce; no download URL is stored in site code.
 
 ## Phase 2: launch readiness and conversion path
 
@@ -43,5 +43,10 @@
 ## Final commerce activation
 
 - [x] Apply owner-approved Starter Kit configuration: live status, $19 price, exact Kit checkout URL, version 1.0, October 2026, format, audience, description, 11 deliverables, delivery disclosure, license summary, and approved CTA label.
-- [ ] Complete activation once the owner supplies the full personal-use license text and refund policy text; the gate holds the product closed until then.
-- [ ] Update launch checklist and handoff docs after activation; publish only on explicit owner approval.
+- [x] Full personal-use license and refund policy supplied by owner; supersede the incomplete activation message.
+
+## Phase 3B: controlled activation
+
+- [ ] Apply exact approved public offer and policies through the existing complete launch gate.
+- [ ] Verify automated safeguards, schema, checkout links, unchanged integrations and all requested pages and widths.
+- [ ] Update launch checklist and completion report. Publishing waits for separate owner approval.

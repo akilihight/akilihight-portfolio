@@ -15,8 +15,8 @@ export const newsletterBenefits = [
 ];
 
 export const DIGITAL_GOODS_POLICY: { approved: boolean; text: string | null } = {
-  approved: false,
-  text: null,
+  approved: true,
+  text: "The AI Confidence Starter Kit is a digital product licensed for personal and individual professional-development use. The approved personal-use license, delivery disclosure, and refund policy below apply to purchases.",
 };
 
 export type DigitalProduct = {
@@ -76,7 +76,7 @@ export const KIT_PRODUCTS: Record<string, DigitalProduct> = {
     ...pending,
     id: "aiStarterKit", public: true, title: "AI Confidence Starter Kit",
     subtitle: "A practical, beginner-friendly guide to using AI with greater confidence and less guesswork.",
-    audience: "Adults, professionals, entrepreneurs, and community learners who want a practical, beginner-friendly introduction to using AI at home and at work.",
+    audience: "Adults, professionals, entrepreneurs, and community learners who want a practical, beginner-friendly introduction to using AI at home and work.",
     description: "Build practical AI confidence without technical jargon. This 33-page starter guide shows you how to choose tools, write clearer prompts, verify answers, protect sensitive information, and apply AI to everyday work.",
     category: "Getting started", detailUrl: "/products/ai-starter-kit",
     status: "live",
@@ -86,24 +86,25 @@ export const KIT_PRODUCTS: Record<string, DigitalProduct> = {
     checkoutUrl: "https://akili-hight.kit.com/products/ai-confidence-starter-kit?step=checkout",
     ctaLabel: "Get the Starter Kit",
     version: "1.0", publicationDate: "October 2026",
-    format: "33-page downloadable PDF guide",
+    format: "33-page digital PDF guide",
     includedDeliverables: [
       "Plain-English introduction to generative AI",
-      "Practical tool-selection guide",
+      "Tool-selection guide",
       "Safe setup and privacy guidance",
       "Six-part prompt framework",
       "Before-and-after prompt examples",
-      "Verification process and warning signs",
+      "Verification methods and warning signs",
       "Six practical AI workflows",
-      "Ten reusable starter prompts",
+      "Ten reusable prompts",
       "Prompt-library worksheet",
-      "Seven-day confidence plan",
+      "Seven-day AI confidence plan",
       "Responsible-use and final-review checklists",
     ],
-    deliveryDisclosure: "Checkout and delivery are handled externally by Kit Commerce. After your purchase is confirmed, Kit delivers the 33-page PDF guide directly to you. AkiliHight.com does not collect, process, or store payment information.",
-    // Summarizes the owner-approved license; the full license and refund texts
-    // are pending owner supply, so the gate holds the product closed until they land.
-    licenseSummary: "Purchase includes a nonexclusive, nontransferable license for personal and individual professional-development use. You may download and print a copy for personal use. Sharing, reproduction, resale, or redistribution is not permitted.",
+    deliveryDisclosure: "This is a digital product. No physical item will be shipped. After successful payment, Kit provides access to the PDF through the purchase confirmation page and receipt email. Customers are responsible for providing a valid email address and saving their personal copy.",
+    personalUseLicense: "Purchase grants the customer a nonexclusive, nontransferable license to use the AI Confidence Starter Kit for personal and individual professional-development use. The customer may download and print a copy for personal use. The guide may not be shared, reproduced, resold, redistributed, published, uploaded, sublicensed, or commercially repackaged, in whole or in substantial part. Team or organizational use requires separate written permission.",
+    refundPolicy: "Because this digital product is delivered immediately, purchases are generally final. Customers who are charged more than once, cannot access the file, receive a damaged file, or receive something materially different from the product description should contact Akili Hight within seven days. The issue will first be addressed through replacement or access support. A full refund may be provided when appropriate or required by law.",
+    licenseSummary: "For personal and individual professional-development use only. You may download and print a personal copy, but may not share, reproduce, resell, redistribute, publish, upload, sublicense, or commercially repackage the guide. Team or organizational use requires separate written permission.",
+    refundPolicySummary: "Purchases are generally final. Contact Akili Hight within seven days for duplicate charges, access problems, damaged files, or a product materially different from its description. Replacement or access support comes first; a full refund may be provided when appropriate or required by law.",
     plannedTopics: [
       "AI basics in plain English", "ChatGPT, Claude, Gemini, Copilot, and Perplexity overview",
       "Practical everyday use cases", "A simple prompting framework", "Useful follow-up prompts",
@@ -133,8 +134,10 @@ export function isHttpsUrl(value: string | null): value is string {
 
 export function isKitCheckoutUrl(value: string | null): value is string {
   if (!isHttpsUrl(value)) return false;
-  const host = new URL(value).hostname;
-  return host === "kit.com" || host.endsWith(".kit.com") || host === "convertkit.com" || host.endsWith(".convertkit.com");
+  const url = new URL(value);
+  const host = url.hostname;
+  return !url.username && !url.password && !url.port && /^\/products\/[^/]+\/?$/.test(url.pathname)
+    && (host === "kit.com" || host.endsWith(".kit.com") || host === "convertkit.com" || host.endsWith(".convertkit.com"));
 }
 
 export function isProductLive(product: DigitalProduct, policy = DIGITAL_GOODS_POLICY): boolean {
@@ -144,10 +147,22 @@ export function isProductLive(product: DigitalProduct, policy = DIGITAL_GOODS_PO
     && !!product.audience.trim() && !!product.format?.trim()
     && !!product.licenseSummary?.trim() && !!product.refundPolicySummary?.trim()
     && !!product.personalUseLicense?.trim() && !!product.refundPolicy?.trim() && !!product.deliveryDisclosure?.trim()
-    && product.price !== null && Number.isFinite(product.price) && product.price > 0
+    && product.price !== null && Number.isFinite(product.price) && product.price > 0 && product.currency === "USD"
     && product.deliveryProvider === "kit" && product.fulfillmentConfigured
     && (!product.thumbnail || (product.thumbnail.approved && !!product.thumbnail.src && !!product.thumbnail.alt))
     && isKitCheckoutUrl(product.checkoutUrl) && policy.approved && !!policy.text?.trim();
+}
+
+export function getProductSchema(product: DigitalProduct): Record<string, unknown> | null {
+  if (!isProductLive(product) || product.price === null) return null;
+  return {
+    "@type": "Product", name: product.title, description: product.description,
+    url: `${SITE_URL}${product.detailUrl}`,
+    category: "digital PDF",
+    ...(product.thumbnail ? { image: product.thumbnail.src.startsWith("https:") ? product.thumbnail.src : `${SITE_URL}${product.thumbnail.src}` } : {}),
+    offers: { "@type": "Offer", price: product.price.toFixed(2), priceCurrency: product.currency,
+      availability: "https://schema.org/InStock", url: product.checkoutUrl },
+  };
 }
 
 // Price text is derived from the one confirmed numeric price, never entered separately.

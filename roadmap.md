@@ -47,6 +47,6 @@
 
 ## Phase 3B: controlled activation
 
-- [ ] Apply exact approved public offer and policies through the existing complete launch gate.
-- [ ] Verify automated safeguards, schema, checkout links, unchanged integrations and all requested pages and widths.
-- [ ] Update launch checklist and completion report. Publishing waits for separate owner approval.
+- [x] Apply exact approved public offer and policies through the existing complete launch gate.
+- [x] Verify automated safeguards, schema, checkout links, unchanged integrations and all requested pages and widths.
+- [x] Update launch checklist and completion report. Publishing waits for separate owner approval.
